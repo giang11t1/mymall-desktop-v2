@@ -1,0 +1,150 @@
+function isoffProductCart() {
+    var shoppingcart = [];
+    if (localStorage.getItem('spcart') != null){
+        shoppingcart = JSON.parse(localStorage.getItem('spcart'));
+    }
+    var result = false;
+    $.ajax({
+        'url'     : encodeURI('/products/getlistproductorder/'),
+        'type'    : 'POST',
+        'async' : false,
+        'data'    : 'order_info=' + JSON.stringify(shoppingcart),
+        'success': function (data) {
+            var obj  = JSON.parse(data);
+            var cart = obj.products;
+            for (var j=0;j<shoppingcart.length;j++) {
+                for (var i=0;i<cart.length;i++) {
+                    if (shoppingcart[j].hasOwnProperty('is_gift') == false) {
+                        if ((shoppingcart[j].id == cart[i].product_id) && cart[i].product_count == 0) {
+                            result= true;
+                            break;
+                        }
+                        if ((shoppingcart[j].id == cart[i].product_id) && (shoppingcart[j].amount > cart[i].product_count)) {
+                            result= true;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    });
+    return result;
+}
+/**
+ * @function CheckAmount
+ * @params number
+ */
+function CheckAmount(num) {
+    var result = num;
+    if (isNaN(num)) result = 1;
+    if (num > 20) result  = 1;
+    if (num <= 0) result  = 1;
+    return result;
+}
+/**
+ * @function html_gift step 1
+ * @return html gift for order
+ */
+function html_gift() {
+    //var html = '<div class="gift-product sum-orders" id="gift_order" style="display:none;">'+
+    //'<ul class="clr gift-item">'+
+    //'<li>'+
+    //'<div class="gift">'+
+    //'<div class="border">'+
+    //'<div class="row">'+
+    //'<div class="col-md-12">'+
+    //'<div class="title-qtk">'+
+    //'<label><i class="ic ic-gift-b"></i>Quà tặng miễn phí đi kèm</label>'+
+    //'</div>'+
+    //'</div>'+
+    //'</div>'+
+    //'<div id="reponse_gift_order"></div>'+
+    //'</div>'+
+    //'</div>'+
+    //'</li>'+
+    //'</ul>'+
+    //'</div>';
+
+    return '' +
+    '<div id="reponse_gift_order" class="gift-all-product">' +
+        '<div class="row">' +
+            '<div class="col-md-12 title-qtk">' +
+                '<label><i class="fa fa-gift" aria-hidden="true"></i>Quà tặng miễn phí đính kèm</label>' +
+            '</div>' +
+        '</div>' +
+    '</div><!-- end gift for all -->';
+}
+
+/**
+ * @function CheckProductCount
+ * @for step 3 if not enough products,auto remove it from cart
+ */
+function CheckProductCount() {
+    var shoppingcart = [];
+    if (localStorage.getItem('spcart')!=null) {
+        shoppingcart = JSON.parse(localStorage.getItem('spcart'));
+    }
+    var id_clear = new Array();
+    var count_remove  = 0;
+    $.ajax({
+        "url"     : encodeURI('/products/getlistproductorder/'),
+        "type"    : "post",
+        "data"    : "order_info=" + JSON.stringify(shoppingcart),
+        "async"   : false,
+        "success" : function(data){
+            data = JSON.parse(data);
+            data = data.products;
+            if (data.length > 0) {
+                for (var i=0;i<data.length;i++) {
+                    for (var j=0;j<data.length;j++) {
+                        if (!shoppingcart[i].hasOwnProperty('is_gift')) {
+                            if (shoppingcart[i].id == data[j].product_id) {
+                                if (data[j].product_count == 0) {
+                                    id_clear[count_remove] = data[j].product_id;
+                                    count_remove++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    });
+    var is_remove = false;
+    var promotion = [], main_product=[],count_main = 0,count =0;
+    // Find cart and promotion
+    for (var i=0;i<shoppingcart.length;i++) {
+        if (shoppingcart[i].hasOwnProperty("is_gift")) {
+            for (var j=0;j<id_clear.length;j++) {
+                if (shoppingcart[i].is_apply == id_clear[j]) {
+                    promotion[count] = shoppingcart[i];
+                    count++;
+                }
+            }
+        } else {
+            if (jQuery.inArray(shoppingcart[i].id,id_clear) !== -1) {
+                main_product[count_main] = shoppingcart[i];
+                count_main++;
+            }
+        }
+    }
+    // Clear Gift
+    for (var i=0;i<shoppingcart.length;i++){
+        for (var j=0;j<promotion.length;j++) {
+            if (promotion[j].is_apply == shoppingcart[i].is_apply) {
+                shoppingcart.splice(i,count);
+                is_remove = true;
+            }
+        }
+    }
+    // Clear Main Product
+    for (var i=0;i<shoppingcart.length;i++){
+        for (var j=0;j<main_product.length;j++) {
+            if (main_product[j].id == shoppingcart[i].id) {
+                shoppingcart.splice(i,count_main);
+                is_remove = true;
+            }
+        }
+    }
+    if(is_remove) localStorage.setItem("spcart",JSON.stringify(shoppingcart));
+}

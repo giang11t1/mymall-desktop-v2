@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" class="no-js ie ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>myMall</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/icon/favicon.ico"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body class="home cs">
+    <header>
+      <div class="container ">
+        <div class="header-top">
+          <div class="row">
+            <div class="col-md-2 logo-humburger"><a href="javascript:void(0);" title="" class="logo"><img src="images/logo.png" class="img-responsive" alt=""></a><a title="" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="humburger collapsed"><span class="fa fa-bars"></span><span>Danh mục</span></a></div>
+            <div class="col-md-6">
+              <form class="form-search dropdown"><a href="javascript:void(0);" title="" type="button" data-toggle="dropdown" class="btn btn-all dropdown-toggle"><span class="text">Tất cả</span><span class="fa fa-angle-down"></span></a>
+                <div role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                  <div class="form-box">
+                    <ul>
+                      <li>text1</li>
+                      <li>text2</li>
+                      <li>text3</li>
+                    </ul>
+                  </div>
+                </div>
+                <input type="text" placeholder="Xu hướng tìm: Note 7, Mi brand 2, son duong moi..." class="form-control" onkeyup="keyupFunction()" id="input-search">
+                <button type="submit" class="btn btn-search"><span class="fa fa-search"></span></button>
+              </form>
+              <!-- form search data =========-->
+              <div class="result-search" id="show-result">
+                <ul class="popular-result">
+                  <li>
+                    <a href="#" title="">Giày cao gót <span>trong </span><span class="category">Thời trang</span></a>
+                  </li>
+                  <li>
+                    <a href="#" title="">Giày cao gót <span>trong </span><span class="category">Phụ kiện</span></a>
+                  </li>
+                  <li>
+                    <a href="#" title="">Giày cao gót <span>trong </span><span class="category">Sách</span></a>
+                  </li>
+                  <li><a href="#" title="">Giày cao gót</a></li>
+                  <li><a href="#" title="">Giày cao gót</a></li>
+                  <li><a href="#" title="">Giày cao gót</a></li>
+                </ul>
+                <div class="recommend-result">
+                  <p class="title">Sản phẩm gợi ý</p>
+                  <ul class="list-result">
+                    <li class="item-result">
+                      <a href="#" title="">
+                        <div class="wrap-img">
+                          <img src="images/recommend-1.png" alt="">
+                        </div>
+                        <div class="information">
+                          <p>Giày Cao Gót 7cm Huy Hoàng HH7020 - Đen</p>
+                          <p class="price">379.000₫</p> <span>455.000₫</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="item-result">
+                      <a href="#" title="">
+                        <div class="wrap-img">
+                          <img src="images/recommend-2.png" alt="">
+                        </div>
+                        <div class="information">
+                          <p>Giày Cao Gót Mũi Nhọn Cindydrella L8K - Kem</p>
+                          <p class="price">269.000₫ </p> <span>359.000₫</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="item-result">
+                      <a href="#" title="">
+                        <div class="wrap-img">
+                          <img src="images/recommend-3.png" alt="">
+                        </div>
+                        <div class="information">
+                          <p>Hoa Xương Rồng Nở Trên Giày Cao Gót</p>
+                          <p class="price">50.000₫ </p> <span>62.000₫</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="item-result">
+                      <a href="#">
+                        <div class="wrap-img" title="">
+                          <img src="images/recommend-4.png" alt="">
+                        </div>
+                        <div class="information">
+                          <p>Giày Cao Gót G Alanti GS15-281-172-K - Kem</p>
+                          <p class="price">289.000₫ </p> <span>319.000₫</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="item-result">
+                      <a href="#" title="">
+                        <div class="wrap-img">
+                          <img src="images/recommend-5.png" alt="">
+                        </div>
+                        <div class="information">
+                          <p>Giày Cao Gót G Alanti GS15-290-66-K - Đỏ</p>
+                          <p class="price">219.000₫</p> <span>379.000₫</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+           <!-- end form search===== -->
+            </div>
+            <div class="col-md-4 clearfix group-dropdown">
+              <div class="dropdown dropdown-follow"><a href="javascript:void(0);" title="" type="button" data-toggle="dropdown" class="dropdown-toggle pull-left link-follow"><span class="fa fa-map-marker"></span><span class="text">Theo dõi đơn hàng</span></a>
+                <div role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                  <div class="form-box form-follow">
+                    <h4>Theo dõi đơn hàng</h4>
+                    <form class="search">
+                      <input placeholder="Bạn nhập mã đơn hàng vào đây ..." class="form-control">
+                      <button class="btn btn-search"><span class="fa fa-chevron-right"></span></button>
+                    </form>
+                    <p>myMall khuyến khích bạn <a href="javascript:void(0);" title="" class="link">đăng nhập</a>để không cần phải nhớ Mã đơn hàng</p>
+                    <p class="italic"><i>Bạn có thắc mắc? </i><a href="javascript:void(0);" title="" class="link">Nhấp vào đây.</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="login dropdown"><a href="javascript:void(0);" title="" type="button" data-toggle="dropdown" class="dropdown-toggle"><span class="icon icon-user"></span><span>Chào bạn   </span><span class="caret"></span></a>
+                <div role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                  <div class="form-box form-login form-logged">
+                    <ul>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-user"></span><span class="text">Quản lý tài khoản</span></a></li>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-cart-copy"></span><span class="text">Theo dõi đơn hàng</span></a></li>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-dollar"></span><span class="text">myXu của tôi</span></a></li>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-heart"></span><span class="text">Sản phẩm yêu thích</span></a></li>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-file"></span><span class="text">Thông tin tài khoản</span></a></li>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-clock"></span><span class="text">Thay đổi mật khẩu</span></a></li>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-close"></span><span class="text">Thoát</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="cart dropdown"><a href="javascript:void(0);" title="" type="button" data-toggle="dropdown" class="dropdown-toggle"><img src="images/cart.png" alt=""><span class="number">6</span></a>
+                <div role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                  <div class="form-box form-box-cart">
+                    <div class="form-head clearfix">
+                      <h4 class="pull-left">Bạn có (0) trong giỏ hàng</h4><a href="javascript:void(0);" title="" class="btn btn-orange pull-right">Đặt hàng</a>
+                    </div>
+                    <div class="form-body">
+                      <p class="orange">Bạn có muốn mua?</p>
+                      <ul class="list-square">
+                        <li><a href="javascript:void(0);" title="">Sản phẩm khuyến mại Hot nhất</a></li>
+                        <li><a href="javascript:void(0);" title="">Top 50 sản phẩm tốt nhất</a></li>
+                        <li><a href="javascript:void(0);" title="">Xu hướng mới nhất</a></li>
+                        <li><a href="javascript:void(0);" title="">Chỉ có tại myMall</a></li>
+                        <li><a href="javascript:void(0);" title="">Hàng cao cấp chính hãng</a></li>
+                      </ul>
+                    </div>
+                    <div class="form-footer clearfix">
+                      <p class="pull-left">Tạm tính </p>
+                      <p class="total-price pull-right">0 đ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="collapseExample">
+        <div class="container">
+          <div class="wrap-slider clearfix">
+            <div class="slider">
+              <div id="owl-demo" class="owl-carousel owl-theme">
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="0">Phụ Kiện Điện Tử</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="1">Tã & Sữa</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="2">Văn Phòng Phẩm</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="3">Mẹ & Bé</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="4">Thiết bị gia đình</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="5">Thể thao dã ngoại</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="6">Laptop & máy tính</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="7">Điện thoại & Tablet</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="8">Máy ảnh & Máy Quayphim</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="9">Thiết bị Nghe nhìn</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="10">Thực Phẩm (Focus Bánh)</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="11">Sức Khỏe & Làm Đẹp</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="12">Thời Trang</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="13">eBook</a></div>
+              </div>
+            </div>
+            <div class="next-pre">
+              <div class="customNavigation"><a href="javascript:void(0);" title="" class="btn prev"><span class="fa fa-angle-left"></span></a><a href="javascript:void(0);" title="" class="btn next"><span class="fa fa-angle-right"></span></a></div>
+            </div>
+          </div>
+          <div class="menu-content">
+            <div class="sub-content">
+              <div class="row">
+                <div class="col-md-3">
+                  <h4>Ngành hàng Tã - sửa</h4>
+                  <ul>
+                    <li><a href="javascript:void(0);" title=""><span class="text"> Tã<i>(1.236)</i></span></a></li>
+                    <li><a href="javascript:void(0);" title=""><span class="text"> Sữa<i>(1.236)</i></span></a></li>
+                    <li class="dropdown">
+                      <button type="button" id="menu1" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="text">Sản phẩm khác <i>(1378)</i></span><span class="fa fa-angle-right"></span></button>
+                      <ul role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                        <li role="presentation"><a href="javascript:void(0);" title=""><span class="text"> Áo em bé<i>(1.236)</i></span></a></li>
+                        <li role="presentation"><a href="javascript:void(0);" title=""><span class="text"> Áo em bé<i>(1.236)</i></span></a></li>
+                        <li role="presentation"><a href="javascript:void(0);" title=""><span class="text"> Áo em bé<i>(1.236)</i></span></a></li>
+                        <li role="presentation"><a href="javascript:void(0);" title=""><span class="text"> Áo em bé<i>(1.236)</i></span></a></li>
+                        <li role="presentation"><a href="javascript:void(0);" title=""><span class="text"> Áo em bé<i>(1.236)</i></span></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-3">
+                  <h4>Xu hướng tìm kiếm</h4>
+                  <ul>
+                    <li><a href="javascript:void(0);" title=""> Sữa công thức Similac</a></li>
+                    <li><a href="javascript:void(0);" title="">Friso Gold 4</a></li>
+                    <li><a href="javascript:void(0);" title="">Sữa dành cho bé thiếu tháng</a></li>
+                    <li><a href="javascript:void(0);" title="">Tã dán Jumbo</a></li>
+                    <li><a href="javascript:void(0);" title="">Bỉm Goo.N</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2">
+                  <h4>Thương hiệu</h4>
+                  <ul>
+                    <li><a href="javascript:void(0);" title="">Meiji</a></li>
+                    <li><a href="javascript:void(0);" title="">Glico - Icreo</a></li>
+                    <li><a href="javascript:void(0);" title="">Pediasure</a></li>
+                    <li><a href="javascript:void(0);" title="">Similac</a></li>
+                    <li><a href="javascript:void(0);" title="">Grand Noble</a></li>
+                    <li><a href="javascript:void(0);" title="">Enfa</a></li>
+                    <li><a href="javascript:void(0);" title="">XO</a></li>
+                    <li><a href="javascript:void(0);" title="">Friso</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <h4>Khuyến mại</h4><a href="javascript:void(0);" title="" class="link-img"><img src="images/upload/banner/banner-menu.png" alt=""></a>
+                </div>
+              </div>
+            </div>
+            <div class="sub-content">content 1</div>
+            <div class="sub-content">content 2</div>
+            <div class="sub-content">content 3</div>
+            <div class="sub-content">content 4</div>
+            <div class="sub-content">content 5</div>
+            <div class="sub-content">content 6</div>
+            <div class="sub-content">content 7</div>
+            <div class="sub-content">content 8</div>
+            <div class="sub-content">content 9</div>
+            <div class="sub-content">content 10</div>
+            <div class="sub-content">content 11</div>
+            <div class="sub-content">content 12</div>
+            <div class="sub-content">content 13</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="banner-brand banner_ banner-cs">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0);" title>myMall.vn</a></li>
+          <li class="breadcrumb-item active"><a href="javascript:void(0);" title>Tài khoản của tôi</a></li>
+        </ol>
+        <div class="clearfix support-customer">
+          <div class="pull-left">
+            <h2>HỖ TRỢ KHÁCH HÀNG - myCare</h2>
+          </div>
+          <div class="pull-right"><a href="tel:1900-636-088" title="" class="call"><span class="fa fa-phone"></span><span class="date"><span>THỨ 2 - THỨ 7</span><span>08:00 - 18:00</span></span><span class="number">1900-636-088</span></a></div>
+        </div>
+        <p class="description">Bạn gặp khó khăn? myMall luôn sẵn sàng phục vụ bạn</p>
+        <form role="search" class="navbar-form">
+          <div class="input-group add-on">
+            <input placeholder="Nhập nội dung bạn cần hỗ trợ" name="srch-term" id="srch-term" type="text" class="form-control">
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <main class="main-cs-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 reset-col-md-2">
+            <div class="sidebar">
+              <div class="box-check">
+                <div class="heading">
+                  <h4 id="first-menu">
+                    <a title="" data-toggle="collapse" href="#" aria-expanded="false" aria-controls="collapseExample">
+                      <span class="text">Câu hỏi thường gặp</span><span class="fa fa-angle-down"></span><span class="fa fa-angle-up"></span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="contentcs1" class="content collapse in">
+                  <ul>
+                    <li><a href="javascript:void(0);" title="">Tài khoản</a></li>
+                    <li><a href="javascript:void(0);" title="">Đơn hàng </a></li>
+                    <li><a href="javascript:void(0);" title="">Thanh toán</a></li>
+                    <li><a href="javascript:void(0);" title="">Giao nhận sản phẩm</a></li>
+                    <li><a href="javascript:void(0);" title="">Đổi trả hàng và hoàn tiền</a></li>
+                    <li><a href="javascript:void(0);" title="">Bảo hành sản phẩm</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="box-check">
+                <div class="heading">
+                  <h4 id="second-menu">
+                    <a title="" data-toggle="collapse" href="#" aria-expanded="false" aria-controls="collapseExample">
+                      <span class="text">Hướng dẫn</span><span class="fa fa-angle-down"></span><span class="fa fa-angle-up"></span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="contentcs2" class="content collapse in">
+                  <ul>
+                    <li><a href="javascript:void(0);" title="">Hướng dẫn đặt hàng</a></li>
+                    <li><a href="javascript:void(0);" title="">Hướng dẫn tìm sản phẩm</a></li>
+                    <li><a href="javascript:void(0);" title="">Hướng dẫn đổi/trả sản phẩm</a></li>
+                    <li><a href="javascript:void(0);" title="">Hướng dẫn đăng ký tài khoản</a></li>
+                    <li><a href="javascript:void(0);" title="">Hướng dẫn sử dụng myCheese</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="box-check">
+                <div class="heading">
+                  <h4 id="third-menu">
+                    <a title="" data-toggle="collapse" href="#" aria-expanded="false" aria-controls="collapseExample">
+                      <span class="text">myMall Việt Nam</span><span class="fa fa-angle-down"></span><span class="fa fa-angle-up"></span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="contentcs3" class="content collapse in">
+                  <ul>
+                    <li><a href="javascript:void(0);" title="">Giới thiệu</a></li>
+                    <li><a href="javascript:void(0);" title="">Quy chế sàn giao dịch</a></li>
+                    <li><a href="javascript:void(0);" title="">Điều khoản sử dụng</a></li>
+                    <li><a href="javascript:void(0);" title="">Điều khoản mua bán hàng hoá</a></li>
+                    <li><a href="javascript:void(0);" title="">Chính sách bảo mật</a></li>
+                  </ul>
+                </div><a href="javascript:void(0);" title="" class="link-blue">Đăng ký mở gian hàng myMall</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-10 reset-col-md-10">
+            <div class="row">
+              <div class="col-md-7 wrap-list-qs">
+                <!-- list question============= -->
+                <ul class="accordion" id="list-question">
+                  <li class="accordion-section">
+                    <a class="accordion-section-title question" href="#accordion-1" title="">Tài khoản myMall là gì? làm thế nào để đăng ký tài khoản trên myMall?</a>
+                    <span><i class="fa fa-sort-desc" aria-hidden="true"></i></span><span><i class="fa fa-sort-asc" aria-hidden="true"></i></span>
+                    <div id="accordion-1" class="accordion-section-content answer">
+                      <ul class="list-answer">
+                        <li class="item-answer">- Quý Khách nhấn vào link <b>“Quên mật khẩu”</b> ở trang đăng nhập, nhập email đã đăng ký và nhấn vào nút "Gửi".</li>
+                        <li class="item-answer">- Đăng nhập tài khoản email trên để xem nội dung hướng dẫn lấy mật khẩu mới từ myMall.</li>
+                        <li class="item-answer">- Nếu Quý Khách không nhận được email cấp lại mật khẩu, Quý Khách vui lòng liên hệ hotline <a href="tel:1900636088" class="phone">1900 636 088</a></li>
+                      </ul>
+                    </div><!--end .accordion-section-content-->
+                  </li><!--end .accordion-section-->
+
+                  <li class="accordion-section">
+                    <a class="accordion-section-title question" href="#accordion-2" title="">Vì sao tôi không nhận được email kích hoạt tài khoản?</a>
+                    <span><i class="fa fa-sort-desc" aria-hidden="true"></i></span><span><i class="fa fa-sort-asc" aria-hidden="true"></i></span>
+                    <div id="accordion-2" class="accordion-section-content">
+                      <ul class="list-answer">
+                        <li class="item-answer">- Quý Khách nhấn vào link <b>“Quên mật khẩu”</b> ở trang đăng nhập, nhập email đã đăng ký và nhấn vào nút "Gửi".</li>
+                        <li class="item-answer">- Đăng nhập tài khoản email trên để xem nội dung hướng dẫn lấy mật khẩu mới từ myMall.</li>
+                        <li class="item-answer">- Nếu Quý Khách không nhận được email cấp lại mật khẩu, Quý Khách vui lòng liên hệ hotline <a href="tel:1900636088" class="phone">1900 636 088</a></li>
+                      </ul>
+                    </div><!--end .accordion-section-content-->
+                  </li><!--end .accordion-section-->
+
+                  <li class="accordion-section">
+                    <a class="accordion-section-title question" href="#accordion-3" title="">Làm thế nào để thay đổi thông tin tài khoản mua hàng?</a>
+                    <span><i class="fa fa-sort-desc" aria-hidden="true"></i></span><span><i class="fa fa-sort-asc" aria-hidden="true"></i></span>
+                    <div id="accordion-3" class="accordion-section-content">
+                      <ul class="list-answer">
+                        <li class="item-answer">- Quý Khách nhấn vào link <b>“Quên mật khẩu”</b> ở trang đăng nhập, nhập email đã đăng ký và nhấn vào nút "Gửi".</li>
+                        <li class="item-answer">- Đăng nhập tài khoản email trên để xem nội dung hướng dẫn lấy mật khẩu mới từ myMall.</li>
+                        <li class="item-answer">- Nếu Quý Khách không nhận được email cấp lại mật khẩu, Quý Khách vui lòng liên hệ hotline <a href="tel:1900636088" class="phone">1900 636 088</a></li>
+                      </ul>
+                    </div><!--end .accordion-section-content-->
+                  </li><!--end .accordion-section-->
+
+                   <li class="accordion-section">
+                    <a class="accordion-section-title question" href="#accordion-4" title="">Nếu quên mật khẩu, làm sao để lấy lại mật khẩu đăng nhập? </a>
+                    <span><i class="fa fa-sort-desc" aria-hidden="true"></i></span><span><i class="fa fa-sort-asc" aria-hidden="true"></i></span>
+                    <div id="accordion-4" class="accordion-section-content">
+                      <ul class="list-answer">
+                        <li class="item-answer">- Quý Khách nhấn vào link <b>“Quên mật khẩu”</b> ở trang đăng nhập, nhập email đã đăng ký và nhấn vào nút "Gửi".</li>
+                        <li class="item-answer">- Đăng nhập tài khoản email trên để xem nội dung hướng dẫn lấy mật khẩu mới từ myMall.</li>
+                        <li class="item-answer">- Nếu Quý Khách không nhận được email cấp lại mật khẩu, Quý Khách vui lòng liên hệ hotline <a href="tel:1900636088" class="phone">1900 636 088</a></li>
+                      </ul>
+                    </div><!--end .accordion-section-content-->
+                  </li><!--end .accordion-section-->
+
+                   <li class="accordion-section">
+                    <a class="accordion-section-title question" href="#accordion-5" title="">Tôi không có tài khoản nhưng muốn mua hàng trên myMall có được hay không?</a>
+                    <span><i class="fa fa-sort-desc" aria-hidden="true"></i></span><span><i class="fa fa-sort-asc" aria-hidden="true"></i></span>
+                    <div id="accordion-5" class="accordion-section-content">
+                      <ul class="list-answer">
+                        <li class="item-answer">- Quý Khách nhấn vào link <b>“Quên mật khẩu”</b> ở trang đăng nhập, nhập email đã đăng ký và nhấn vào nút "Gửi".</li>
+                        <li class="item-answer">- Đăng nhập tài khoản email trên để xem nội dung hướng dẫn lấy mật khẩu mới từ myMall.</li>
+                        <li class="item-answer">- Nếu Quý Khách không nhận được email cấp lại mật khẩu, Quý Khách vui lòng liên hệ hotline <a href="tel:1900636088" class="phone">1900 636 088</a></li>
+                      </ul>
+                    </div><!--end .accordion-section-content-->
+                  </li><!--end .accordion-section-->
+
+                  <li class="accordion-section">
+                    <a class="accordion-section-title question" href="#accordion-6" title="">Tài khoản myXu là gì? Cách sử dụng myXu ra sao? Tài khoản myXu của tôi có hạn xử dụng hay không?</a>
+                    <span><i class="fa fa-sort-desc" aria-hidden="true"></i></span><span><i class="fa fa-sort-asc" aria-hidden="true"></i></span>
+                    <div id="accordion-6" class="accordion-section-content">
+                      <ul class="list-answer">
+                        <li class="item-answer">- Quý Khách nhấn vào link <b>“Quên mật khẩu”</b> ở trang đăng nhập, nhập email đã đăng ký và nhấn vào nút "Gửi".</li>
+                        <li class="item-answer">- Đăng nhập tài khoản email trên để xem nội dung hướng dẫn lấy mật khẩu mới từ myMall.</li>
+                        <li class="item-answer">- Nếu Quý Khách không nhận được email cấp lại mật khẩu, Quý Khách vui lòng liên hệ hotline <a href="tel:1900636088" class="phone">1900 636 088</a></li>
+                      </ul>
+                    </div><!--end .accordion-section-content-->
+                  </li><!--end .accordion-section-->
+
+                  <li class="accordion-section">
+                    <a class="accordion-section-title question" href="#accordion-7" title="">Tại sao myXu của tôi không được cộng vào tài khoản sau khi đặt mua hàng thành công?</a>
+                    <span><i class="fa fa-sort-desc" aria-hidden="true"></i></span><span><i class="fa fa-sort-asc" aria-hidden="true"></i></span>
+                    <div id="accordion-7" class="accordion-section-content">
+                      <ul class="list-answer">
+                        <li class="item-answer">- Quý Khách nhấn vào link <b>“Quên mật khẩu”</b> ở trang đăng nhập, nhập email đã đăng ký và nhấn vào nút "Gửi".</li>
+                        <li class="item-answer">- Đăng nhập tài khoản email trên để xem nội dung hướng dẫn lấy mật khẩu mới từ myMall.</li>
+                        <li class="item-answer">- Nếu Quý Khách không nhận được email cấp lại mật khẩu, Quý Khách vui lòng liên hệ hotline <a href="tel:1900636088" class="phone">1900 636 088</a></li>
+                      </ul>
+                    </div><!--end .accordion-section-content-->
+                  </li><!--end .accordion-section-->
+                </ul><!--end .accordion-->
+                <!-- ============================================================= -->
+               <nav aria-label="Page navigation">
+                <ul class="pagination">
+                  <li>
+                    <a href="#" aria-label="Previous" title="">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li>
+                    <a href="#" aria-label="Next" title="">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+                <!-- end -->
+              </div>
+              <div class="col-md-5">
+                <div class="form-input-info">
+                  <h3>Gửi yêu cầu hỗ trợ</h3>
+                  <form>
+                    <div class="item">
+                      <label> Họ tên của bạn</label>
+                      <input placeholder="" class="form-control">
+                    </div>
+                    <div class="item">
+                      <label> Địa chỉ email</label>
+                      <input placeholder="" class="form-control">
+                    </div>
+                    <div class="item">
+                      <label> Tiêu đề yêu cầu</label>
+                      <input placeholder="" class="form-control">
+                    </div>
+                    <div class="item">
+                      <label> Mã đơn hàng (nếu có)</label>
+                      <input placeholder="Nhập mã đơn hàng, ví dụ: 1079870765 " class="form-control">
+                    </div>
+                    <div class="item">
+                      <label> Nội dung yêu cầu</label>
+                      <textarea class="form-control"></textarea>
+                    </div>
+                    <button type="button" class="btn send-request" data-toggle="modal" data-target="#myModal1">Gửi yêu cầu</button>
+                    <div class="modal fade" id="myModal1" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+                          <img src="images/icon-check.png" alt="">
+                          <p class="success">Yêu cầu của bạn đã được gửi thành công</p>
+                          <p><span class="origane">myCare</span> sẽ trả lời yêu cầu của bạn trong thời gian sớm nhất.</p>
+                          <p class="last-line">Xin vui lòng gọi số hotline <a href="tel: 1900636088">1900 636 088</a> để được hỗ trợ nhanh hơn</p>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h4>Hỗ trợ khách hàng</h4>
+            <ul>
+              <li><a href="javascript:void();" title="Tìm hiểu chính sách đổi trả">Tìm hiểu chính sách đổi trả</a>
+              </li>
+              <li><a href="javascript:void();" title="Tìm hiểu chính sách bảo hành">Tìm hiểu chính sách bảo hành</a>
+              </li>
+              <li><a href="javascript:void();" title="Cách đặt hàng online &amp; thanh toán">Cách đặt hàng online & thanh toán</a>
+              </li>
+              <li><a href="javascript:void();" title="Chưa tìm được sản phẩm mong muồn" class="default">Chưa tìm được sản phẩm mong muốn?</a>
+              </li>
+              <li><a href="javascript:void();" title="Trung tâm hỗ trợ - myCare">Trung tâm hỗ trợ - myCare</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h4>Bạn thắc mắc?</h4>
+            <p class="text-support">Tổng đài hỗ trợ<i>(bán hàng, góp ý, khiếu nại)</i></p>
+            <p class="telephone"><a href="tel:1900 636 798" title="" target="_blank">1900 636 798</a></p>
+            <p class="time">Chúng tôi phục vụ bạn từ <b>(08-18h / T2-T7)</b></p><a href="javascript:void(0);" title="" class="btn btn-border"><span>Gửi yêu cầu hỗ trợ khác</span></a>
+          </div>
+          <div class="col-sm-3 padding">
+            <h4>myMall.vn</h4>
+            <ul>
+              <li><a href="javascript:void();" title="Giới thiệu myMall Việt Nam">Giới thiệu myMall Việt Nam</a>
+              </li>
+              <li><a href="javascript:void();" title="Quy chế sàn giao dịch myMall">Quy chế sàn giao dịch myMall</a>
+              </li>
+              <li><a href="javascript:void();" title="Điều khoản sử dụng">Điều khoản sử dụng</a>
+              </li>
+              <li class="orange"><a href="javascript:void();" title="Bán hàng trên myMall">Bán hàng trên myMall</a>
+              </li>
+              <li class="bct"><img src="images/bct.jpg" alt="">
+                <p><i>(myMall đã được đăng ký với Bộ Công Thương - mã hóa thông tin với Norton Synmantic)</i></p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <div class="connect-mymall">
+              <h4>Kết nối myMall</h4>
+              <p><img src="images/imgfb.jpg" alt=""></p>
+              <p class="total-link">Dự án TMĐT của <a href="javascript:void(0);" title="">Tập đoàn ITL<br/></a><a href="javascript:void(0);" title="">myMall.vn</a><a href="javascript:void(0);" title="">myFace.vn</a><a href="javascript:void(0);" title="">shop.myFace.vn</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-md-5 padding1">
+              <p class="copyright">Copyright ©2016 - Công ty TNHH Thương mại Điện tử Modern Life.</p>
+              <p class="address"><b>Văn phòng: </b><span>P802, C.T Plaza Trường Sơn, P. 2, Q. Tân Bình, TP. HCM. </span></p>
+              <p class="address">GP số: <b>0312952685 </b>do Sở kế hoạch &amp; Đầu tư TP. Hồ Chí Minh cấp ngày 02/10/2014</p>
+            </div>
+            <div class="col-md-7 padding2">
+              <p>Bạn có thể thanh toán với</p>
+              <div class="clearfix">
+                <div class="total-card pull-left"><span class="btn btn-border">Tiền mặt - COD</span><span class="btn btn-border">ATM</span><span class="btn btn-border">Visa - Master</span><span class="btn btn-border">Trả Góp</span></div>
+                <div class="pull-right"><a href="javascript:void(0);" title="" class="btn btn-border btn-version-mobile"><span><i class="text">Xem phiên bản Mobile   </i><i class="fa fa-caret-right"></i></span></a></div>
+              </div>
+            </div>
+          </div>
+        </div><a href="#" class="scrollup"><span class="fa fa-angle-up">                  </span></a>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/l10n.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/accordion.js"></script>
+    <script src="js/script.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+    <script>
+      function keyupFunction() {
+        var str = $("#input-search").val();
+        if(str!=''){
+          document.getElementById("show-result").style.display = "block";
+        }else {
+          document.getElementById("show-result").style.display = "none";
+        }
+      }
+      </script>
+    <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </body>
+</html>

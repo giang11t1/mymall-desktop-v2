@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" class="no-js ie ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>myMall</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/icon/favicon.ico"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"> -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/global.css">
+    <!-- <script src="js/modernizr.js"></script> -->
+  </head>
+  <body class="home">
+    <header class="header-cart">
+      <div class="container">
+        <div class="header-top">
+          <div class="row">
+            <div class="col-md-2 logo-humburger"><a href="javascript:void(0);" title="" class="logo"><img src="images/logo.png" class="img-responsive" alt=""></a><a title="" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="humburger collapsed"><span class="fa fa-bars"></span><span>Danh mục</span></a></div>
+            <div class="col-md-6">
+              <form class="form-search dropdown"><a href="javascript:void(0);" title="" type="button" data-toggle="dropdown" class="btn btn-all dropdown-toggle"><span class="text">Tất cả</span><span class="fa fa-angle-down"></span></a>
+                <div role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                  <div class="form-box">
+                    <ul>
+                      <li>text1</li>
+                      <li>text2</li>
+                      <li>text3</li>
+                    </ul>
+                  </div>
+                </div>
+                <input type="text" placeholder="Xu hướng tìm: Note 7, Mi brand 2, son duong moi..." class="form-control">
+                <button type="submit" class="btn btn-search"><span class="fa fa-search"></span></button>
+              </form>
+            </div>
+            <div class="col-md-4 clearfix hotline-header">
+              <p>Hotline: <a href="tel:1900636088" class="phone">1900 636 088</a> (08-18h, từ T2-T7)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page-register">
+      <div class="container">
+        <h2 class="title-payment col-md-12">Thanh toán đơn hàng</h2> 
+        <div class="left-cart col-md-8">
+          <!-- show error box in cart  -->
+          <table class="table tb-payment">
+            <tbody>
+              <tr class="title-tb">
+                <td>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i> <span>Địa chỉ nhận hàng</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="col-md-12">
+                  <div class="box-sign-account">
+                    <h1>ĐĂNG NHẬP TÀI KHOẢN</h1>
+                    <div class="row">
+                      <div class="col-sm-6 box-2">
+                        <h2>
+                          Đăng nhập bằng tài khoản
+                        </h2>
+                        <div class="row group-btn-social">
+                          <div class="col-sm-9">
+                            <a class="btn btn-social btn-fb"><span class="icon icon-fb"></span><span class="text">Facebook</span> </a>
+                            <a class="btn btn-social btn-gg"><span class="icon icon-gg"></span><span class="text">Google+</span> </a>
+                            <a class="link back" href="javascript:void();" title=""><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Quay lại</a>
+                          </div>
+                          <div class="col-sm-3 text-center hidden-xs ">
+                            <div class="box-or">
+                              hoặc
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 box-2">
+                        <h2>
+                          Đăng nhập bằng tài khoản myMall
+                        </h2>
+                        <form >
+                          <div class="form-group">
+                              <label class="text lb-email">Địa chỉ email</label>
+                              <input type="email" class="form-control" id="email" placeholder="">
+                              <label class="error hidden">error</label>
+                          </div>
+                          <div class="form-group">
+                              <label class="text password">Mật khẩu</label>
+                              <input type="password" class="form-control" id="password" placeholder="">
+                              <label class="error hidden">error</label>
+                          </div>
+                          <div class="form-group forgot-password">
+                            <input type="checkbox" aria-label="..."> <span>Ghi nhớ tài khoản</span>
+                            <a class="link" href="javascript:void();" title="">Quên mật khẩu?</a>
+                          </div>
+                        </form>
+                        <a class="btn btn-red" href="javascript:void();" title="" data-toggle="modal" data-target="#DangKy">Đăng nhập</a>
+                        <div class="form-group">
+                          <span>Chưa có tài khoản ? </span>
+                          <a class="link" href="16.2_register.html" title="">Đăng ký</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+         <!-- phuong thuc giao hang -->
+         <table class="table tb-payment tb-method">
+           <tbody>
+             <tr class="title-method">
+               <td><i class="fa fa-truck" aria-hidden="true"></i><span>Phương thức giao hàng</span></td>
+             </tr>
+             <tr>
+               <td class="form">
+                 <form class="radio-form">
+                    <div class="first">
+                      <input type="radio" name="defaut" value="giao hang tieu chuan" checked > 
+                      <label>
+                        Giao hàng tiêu chuẩn
+                      </label>
+                      <p>Dự kiến giao đơn hàng này vào ngày <span class="date">11/10/2016</span> hoặc <span class="date">12/10/2016</span></p>
+                    </div>
+                    <div class="first second">
+                      <input type="radio" name="defaut" value="24h"> 
+                      <label>Giao hàng 24h</label>
+                      <p> Dự kiến giao hàng này vào ngày <span class="date">20/10/2016</span></p>
+                    </div>
+                  </form>
+               </td>
+             </tr>
+           </tbody>
+         </table>
+         <!-- phuong tuc thanh toan tien mat==== -->
+         <table class="table tb-payment tb-paymoney">
+           <tbody>
+             <tr class="title">
+               <td><i class="fa fa-money" aria-hidden="true"></i><span>Phương thức thanh toán</span></td>
+             </tr>
+             <tr>
+               <td>
+                 <div class="list-type-payment">
+                      <div class="type active">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <span class="icon-check-stt"><i class="fa fa-check"></i></span>
+                                  <i class="ic ic-pmtype ic-pmtype1"></i>
+                                  <label>
+                                      Thanh toán bằng tiền mặt khi giao hàng
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="type">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <span class="icon-check-stt"><i class="fa fa-check"></i></span>
+                                  <i class="ic ic-pmtype ic-pmtype2"></i>
+                                  <label>
+                                      Thanh toán bằng thẻ ATM có đăng ký Internet Banking
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="type">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <span class="icon-check-stt"><i class="fa fa-check"></i></span>
+                                  <i class="ic ic-pmtype ic-pmtype3"></i>
+                                  <label>
+                                      Thanh toán bằng thẻ tín dụng Visa/Master card
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="type">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <span class="icon-check-stt"><i class="fa fa-check"></i></span>
+                                  <i class="ic ic-pmtype ic-pmtype4"></i>
+                                  <label>
+                                      Thanh toán bằng Ví điện tử VTC Pay
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="type">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <span class="icon-check-stt"><i class="fa fa-check"></i></span>
+                                  <i class="ic ic-pmtype ic-pmtype5"></i>
+                                  <label>
+                                      Thanh toán trả góp lãi suất 0% với thẻ tín dụng Sacombank
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12 checkbox-bottom">
+                              <input type="checkbox" data-toggle="collapse" data-target="#VAT-info">
+                              <span>Yêu cầu xuất hoá đơn giá trị gia tăng cho đơn hàng này</span>
+                          </div>
+                      </div>
+                      <!-- when click checkbox show form -->
+                      <div class="collapse" id="VAT-info">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="well">
+                                    <span> Vui lòng điền đầy đủ thông tin công ty để nhận hoá đơn GTGT:</span>
+                                    <div class="frm-report">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4">
+                                                <label>Tên công ty</label>
+                                            </div>
+                                            <div class="col-md-9 col-sm-8">
+                                                <input type="text" placeholder="Ví dụ: Công ty TNHH Thương Mại Điện Tử Modern Life">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4">
+                                                <label>Mã số thuế</label>
+                                            </div>
+                                            <div class="col-md-9 col-sm-8">
+                                                <input type="text" placeholder="Ví dụ: 398473094385">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-4">
+                                                <label>Địa chỉ công ty</label>
+                                            </div>
+                                            <div class="col-md-9 col-sm-8">
+                                                <input type="text" placeholder="Ví dụ: 52 Trường Sơn, P.2, Q.Tân Bình, TP.HCM">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  <!-- end -->
+                  </div>
+               </td>
+             </tr>
+           </tbody>
+         </table>
+        </div>
+        <!-- div thông tin đơn hàng -->
+        <div class="right-cart col-md-4">
+           <table class="table">
+            <tbody>
+              <tr>
+                <td class="title-right">Thông tin đơn hàng <span class="number-payment">(2 sản phẩm)</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <form>
+                    <div class="first-product">
+                      <ul class="infor-product">
+                        <li class="infor1">
+                          <div class="wrap-img">
+                            <img src="images/right-product1.png" alt="">
+                          </div>
+                          <div class="infor-detail">
+                            <a class="title" href="#">Túi Da Đeo Chéo LATA HN08 - Da Bò Nhạt</a>
+                            <p>Màu: nâu -  Freesize</p>
+                          </div>
+                        </li>
+                        <li class="infor2">
+                          <input type="number" value="1"></input>
+                          <div class="remove">
+                            <i class="fa fa-times" aria-hidden="true"></i><span>Xóa</span>
+                          </div>
+                        </li>
+                        <li class="infor3">
+                          <p>574.000đ</p>
+                        </li>
+                      </ul>
+                      <div class="gift">
+                        <i class="fa fa-gift" aria-hidden="true"></i> <span>Tặng Ví cầm tay Lata VN03 da bò nhạt</span>
+                      </div>
+                    </div>
+                    <div class="second-product">
+                      <ul class="infor-product">
+                        <li class="infor1">
+                          <div class="wrap-img">
+                            <img src="images/right-product2.png" alt="">
+                          </div>
+                          <div class="infor-detail">
+                            <a class="title" href="#">Búp Bê Hàn Quốc bằng Giấy Handmade Paper Craft (Nữ)</a>
+                            <p>Size: L</p>
+                          </div>
+                        </li>
+                        <li class="infor2">
+                          <input type="number" value="1"></input>
+                          <div class="remove">
+                            <i class="fa fa-times" aria-hidden="true"></i><span>Xóa</span>
+                          </div>
+                        </li>
+                        <li class="infor3">
+                          <p>230.000đ</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- part 2 -->
+                    <div class="input-right">
+                      <div class="btn-apply">
+                        <input type="text" placeholder="Nhập mã giảm giá"></input>
+                        <button type="button" value="Ap dung"> Áp dụng</button>
+                      </div>
+                      <div class="myxu">
+                        <i class="myxu-cart">&nbsp</i>
+                        <p>Bạn đang có <span>5840</span> myXu, đổi myXu để thanh toán</p>
+                      </div>
+                      <div class="btn-apply change">
+                        <input type="text" placeholder="Nhập số myXu cần đổi"></input>
+                        <button type="button" value="Ap dung"> Đổi myXu</button>
+                      </div>
+                    </div>
+                    <!-- part 3 = -->
+                    <div class="wrap-total">
+                      <p>Tổng cộng: <span class="price">804.000đ</span></p> 
+                      <p>Giảm giá myXu: <span>-0đ</span></p> 
+                      <p>Giảm giá coupon: <span>-0đ</span></p> 
+                      <p>Phí vận chuyển: <span>Miễn phí</span></p> 
+                    </div>
+                    <!-- part 4 -->
+                    <div class="note-order">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i> <span>Ghi chú cho đơn hàng</span>
+                      <textarea rows="5"></textarea>
+                    </div>
+                    <button type="button" value="order" class="order-payment">Đặt hàng</button>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+       
+      </div>
+    </main>
+    <footer class="footer-cart">
+      <div class="container">
+        <ul class="listmenu">
+          <li class="item-menu">
+            <a href="#" title="">Hướng dẫn đặt hàng</a>
+          </li>
+          <li class="item-menu">
+            <a href="#" title="">Hướng dẫn thanh toán</a>
+          </li>
+          <li class="item-menu">
+            <a href="#" title="">Hướng dẫn đổi trả - hoán tiền</a>
+          </li>
+          <li class="item-menu">
+            <a href="#" title="">Các vấn đề về đơn hàng</a>
+          </li>
+          <li class="item-menu">
+            <a href="#" title="">Cần trợ giúp trực tuyến</a>
+          </li>
+        </ul>
+        <p class="line-footer">©2016 - Bản quyền của Công ty TNHH Thương Mại Điện Tử Modern Life.</p>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/l10n.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script src="js/script.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+ 
+    <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </body>
+</html>

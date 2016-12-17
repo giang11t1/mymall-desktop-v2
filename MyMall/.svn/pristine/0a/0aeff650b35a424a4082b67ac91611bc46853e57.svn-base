@@ -1,0 +1,121 @@
+function SearchProducts(){var e=document.getElementById("txtSearch").value;e.length>0?$.post("/search",{ajax:"yes",loader:"hide",keywords:e},function(e){var t="";"object"!=typeof e||$.isEmptyObject(e)?t="":(t=ParseJson2List(e),$("#RBox").empty().html(t).show())},"json"):$("#RBox").hide()}function ParseJson2List(e){var t="",n=$("#imgHost").val();if(e.length>0){t='<ul class="listProducts">';for(var i=0;i<e.length;i++)t+='<li class="itemLi"><a class="itemName" href="#">',t+='<img class="imgSearch" src="'+n+e[i].image+'" />',t+='<span class="nameSearch">'+e[i].name+"</span><br />",t+='<span class="priceSale">'+e[i].price+"</span>",t+='<span class="priceBuy">'+e[i].site_price+"</span>",t+="</a></li>";t+="</ul>"}return t}function DelUnicode(e){return e=e.toLowerCase(),e=e.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g,"a"),e=e.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g,"e"),e=e.replace(/ì|í|ị|ỉ|ĩ/g,"i"),e=e.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g,"o"),e=e.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g,"u"),e=e.replace(/ỳ|ý|ỵ|ỷ|ỹ/g,"y"),e=e.replace(/đ/g,"d"),e=e.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'| |\"|\&|\#|\[|\]|~|$|_/g,"-"),e=e.replace(/-+-/g,"-"),e=e.replace(/^\-+|\-+$/g,"")}function isNumber(e){var t=window.event?e.keyCode:e.which;return!(t>31&&(48>t||t>57))}function isLetters(e){var t=window.event?e.keyCode:e.which;return!(t>32&&(65>t||t>90)&&(97>t||t>122))}function isFloat(e){var t=window.event?e.keyCode:e.which;return!(46!=t&&t>31&&(48>t||t>57))}function isEmail(e){var t=new RegExp(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);return $.trim(e).length?t.test(e):!1}function checkBoxAll(e,t,n){var i=$("#"+e).attr("checked");$("."+t).each(function(){this.checked=i}),""!=n&&$("."+n).each(function(){this.checked=i})}function RightClick(e,t){$("#"+e).bind("contextmenu",function(e){return $("."+t).hide(),2==e.button?($("."+t).show("slow"),$("."+t).css({display:"block",top:e.pageY,left:e.pageX,position:"absolute"})):$("."+t).hide("slow"),!1}),$("."+t).hover(function(){},function(){$("."+t).hide("slow")})}function selOption(e,t){$("#"+e+" option").each(function(){this.value==t&&$(this).prop("selected",!0)})}function CreateTab(e,t,n){var i="";$("."+e+":not(."+e+":first)").hide(),$("ul."+t+" li a").bind("click",function(){$("ul."+t+" li a").hasClass(n)?($("ul."+t+" li a").removeClass(n),$(this).addClass(n),i=$(this).attr("rel")):$("ul."+t+" li").hasClass(n)&&($("ul."+t+" li").removeClass(n),$(this).parent().addClass(n),i=$(this).parent().attr("rel")),$("."+e).hide(),$("#"+i).delay(100).fadeIn()})}function AccordionMenu(e,t,n,i){i?($("#"+e+" ."+t+" > div:not(:first)").hide(),$("#"+e+" ."+t+" > div:first").addClass("Opening")):$("#"+e+" ."+t+" > div").hide(),$("#"+e+" ."+t+" > "+n).click(function(){$("#"+e+" ."+t+" > div").slideUp(500).removeClass("Opening").addClass("Closed");var n=$(this).parent().index(),i=$("#"+e+" ."+t+":eq("+n+") > div");i.is(":hidden")?i.slideDown().addClass("Opening"):i.slideUp().removeClass("Opening").addClass("Closed")})}function CreateEditor(e,t,n){CKEDITOR.replace(e,{height:n,width:t,enterMode:CKEDITOR.ENTER_BR,filebrowserBrowseUrl:"../ckfinder/ckfinder.html",filebrowserImageBrowseUrl:"../ckfinder/ckfinder.html?Type=Images",filebrowserFlashBrowseUrl:"../ckfinder/ckfinder.html?Type=Flash",filebrowserUploadUrl:"../ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files",filebrowserImageUploadUrl:"../ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images",filebrowserFlashUploadUrl:"../ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash",toolbar:[["Cut","Copy","Paste","PasteText","PasteFromWord","-","Undo","Redo"],["Link","Unlink","Anchor"],["Image","Table","HorizontalRule","Smiley","SpecialChar","PageBreak","Iframe"],["Maximize"],["Source"],["Bold","Italic","Underline","Strike","Subscript","Superscript","-","RemoveFormat"],["NumberedList","BulletedList","-","Outdent","Indent","-","Blockquote","CreateDiv","-","JustifyLeft","JustifyCenter","JustifyRight","JustifyBlock","-","BidiLtr","BidiRtl"],["Styles","Format","Font","FontSize"],["TextColor","BGColor"]]})}function number_format(e,t,n,i){e=(e+"").replace(/[^0-9+\-Ee.]/g,"");var a=isFinite(+e)?+e:0,r=isFinite(+t)?Math.abs(t):0,s="undefined"==typeof i?",":i,o="undefined"==typeof n?".":n,l="",u=function(e,t){var n=Math.pow(10,t);return""+(Math.round(e*n)/n).toFixed(t)};return l=(r?u(a,r):""+Math.round(a)).split("."),l[0].length>3&&(l[0]=l[0].replace(/\B(?=(?:\d{3})+(?!\d))/g,s)),(l[1]||"").length<r&&(l[1]=l[1]||"",l[1]+=new Array(r-l[1].length+1).join("0")),l.join(o)}function stripslashes(e){return(e+"").replace(/\\(.?)/g,function(e,t){switch(t){case"\\":return"\\";case"0":return"\x00";case"":return"";default:return t}})}function cutString(e,t){var n=e.split(" "),i="";if(n.length<=t)return e;for(var a=0;t>a;a++)i+=n[a]+" ";return i+=" ..."}function implode(e,t){var n="",i="",a="";if(1===arguments.length&&(t=e,e=""),"object"==typeof t){if("[object Array]"===Object.prototype.toString.call(t))return t.join(e);for(n in t)i+=a+t[n],a=e;return i}return t}function explode(e,t,n){if(arguments.length<2||"undefined"==typeof e||"undefined"==typeof t)return null;if(""===e||e===!1||null===e)return!1;if("function"==typeof e||"object"==typeof e||"function"==typeof t||"object"==typeof t)return{0:""};e===!0&&(e="1"),e+="",t+="";var i=t.split(e);return"undefined"==typeof n?i:(0===n&&(n=1),n>0?n>=i.length?i:i.slice(0,n-1).concat([i.slice(n-1).join(e)]):-n>=i.length?[]:(i.splice(i.length+n),i))}function end(e){this.php_js=this.php_js||{},this.php_js.pointers=this.php_js.pointers||[];var t=function(e){for(var t=0,n=this.length;n>t;t++)if(this[t]===e)return t;return-1},n=this.php_js.pointers;n.indexOf||(n.indexOf=t),-1===n.indexOf(e)&&n.push(e,0);var i=n.indexOf(e);if("[object Array]"!==Object.prototype.toString.call(e)){var a,r=0;for(var s in e)r++,a=e[s];return 0===r?!1:(n[i+1]=r-1,a)}return 0===e.length?!1:(n[i+1]=e.length-1,e[n[i+1]])}function strip_tags(e,t){t=(((t||"")+"").toLowerCase().match(/<[a-z][a-z0-9]*>/g)||[]).join("");var n=/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi,i=/<!--[\s\S]*?-->|<\?(?:php)?[\s\S]*?\?>/gi;return e.replace(i,"").replace(n,function(e,n){return t.indexOf("<"+n.toLowerCase()+">")>-1?e:""})}jQuery(function(e){e(document).ajaxSend(function(t,n,i){var a="loader",r="undefined"!=typeof i.data&&void 0!=typeof i.data&&null!=typeof i.data?unescape(i.data.replace(new RegExp("^(?:.*[&\\?]"+escape(a).replace(/[\.\+\*]/g,"\\$&")+"(?:\\=([^&]*))?)?.*$","i"),"$1")):"";"hide"===r||-1!=i.url.indexOf("/search")?e("#ajaxBox").hide():e("#ajaxBox").show()}).ajaxComplete(function(){e("#ajaxBox").hide()}),e(".bxsliderCateH1").length>0&&e(".bxsliderCateH1").bxSlider({auto:!0,pager:!1}),e("form#FormRegister").validate({errorElement:"div",onfocusout:function(e){this.element(e)},onkeyup:!1,groups:{agree:"agree",name:"Gender txtName"},errorPlacement:function(e,t){var n=t.prop("name");"Gender"===n||"txtName"===n?e.insertAfter(".error").css("color","#ff7726"):e.insertAfter(t)},rules:{txtEmail:{required:!0,email:!0,remote:{ajax:"yes",url:"/check-email",type:"post",dataType:"json",data:{txtEmail:function(){return e("#txtEmail").val()},csrf_test_name:function(){return e("input[name=csrf_test_name]").val()}}}},RegisterPass:{required:!0,minlength:"6",maxlength:"20"},RegisterRePass:{required:!0,equalTo:"#RegisterPass"},txtCapcha:"required",Gender:"required",txtName:"required",agree:"required"},messages:{txtEmail:{required:"Vui lòng nhập email !",email:"Email không hợp lệ !",remote:"Email này đã được sử dụng !"},RegisterPass:{required:"Vui lòng nhập mật khẩu !",minlength:"Mật khẩu ít nhất là 6 kí tự !",maxlength:"Mật khẩu tối đa là 20 kí tự !"},RegisterRePass:{required:"Vui lòng nhập lại mật khẩu !",equalTo:"Mật khẩu không trùng khớp !"},Gender:"Vui lòng chọn giới tính !",txtName:"Vui lòng nhập họ tên !",agree:"Bạn cần đồng ý với Điều khoản sử dụng của MyMall",txtCapcha:"Vui lòng nhập mã bảo mật !"},submitHandler:function(){return e.ajax({ajax:"yes",url:"/dang-ky-tai-khoan",type:"post",data:"txtEmail="+encodeURI(e("input#txtEmail").val())+"&RegisterPass="+encodeURI(e("input#RegisterPass").val())+"&RegisterRePass="+encodeURI(e("input#RegisterRePass").val())+"&Gender="+encodeURI(e("select#Gender").val())+"&txtName="+encodeURI(e("input#txtName").val())+"&Register=Register&csrf_test_name="+e("input[name=csrf_test_name]").val()+"&txtCapcha="+encodeURI(e("input#txtCapcha").val())+"&capchaCode="+encodeURI(e("input#capchaCode").val()),success:function(t){if("SuccessRegister"==t){var n=window.location.href;n=n.replace("?login=signin",""),n=n.replace("?login=signup",""),window.location=n+"?login=true"}else e("div.message").css("display","block").html(t)}}),!1}}),e("form#FormRegisterEvent").validate({errorElement:"div",onfocusout:function(e){this.element(e)},onkeyup:!1,groups:{agree:"agree",name:"Gender txtName"},errorPlacement:function(e,t){var n=t.prop("name");"Gender"===n||"txtName"===n?e.insertAfter(".error").css("color","#ff7726"):e.insertAfter(t)},rules:{txtEmail:{required:!0,email:!0,remote:{ajax:"yes",url:"/check-email",type:"post",dataType:"json",data:{txtEmail:function(){return e("#txtEmail").val()},csrf_test_name:function(){return valuetoken}}}},txtPhone:{required:!0},RegisterPass:{required:!0,minlength:"6",maxlength:"20"},txtCapcha:"required",RegisterRePass:{required:!0,equalTo:"#RegisterPass"},Gender:"required",txtName:"required",agree:"required"},messages:{txtPhone:{required:"Vui lòng nhập số điện thoại !"},txtEmail:{required:"Vui lòng nhập email !",email:"Email không hợp lệ !",remote:"Email này đã được sử dụng !"},RegisterPass:{required:"Vui lòng nhập mật khẩu !",minlength:"Mật khẩu ít nhất là 6 kí tự !",maxlength:"Mật khẩu tối đa là 20 kí tự !"},Gender:"Vui lòng chọn giới tính !",txtName:"Vui lòng nhập họ tên !",RegisterRePass:{required:"Vui lòng nhập lại mật khẩu !",equalTo:"Mật khẩu không trùng khớp !"},agree:"Bạn cần đồng ý với Điều khoản sử dụng của MyMall",txtCapcha:"Vui lòng nhập mã bảo mật !"},submitHandler:function(){return e.ajax({ajax:"yes",url:"/dang-ky-su-kien",type:"post",data:"txtEmail="+encodeURI(e("input#txtEmail").val())+"&txtPhone="+encodeURI(e("input#txtPhone").val())+"&RegisterPass="+encodeURI(e("input#RegisterPass").val())+"&RegisterRePass="+encodeURI(e("input#RegisterRePass").val())+"&Gender="+encodeURI(e("select#Gender").val())+"&txtName="+encodeURI(e("input#txtName").val())+"&Register=Register&csrf_test_name="+e("input[name=csrf_test_name]").val()+"&txtCapcha="+encodeURI(e("input#txtCapcha").val())+"&capchaCode="+encodeURI(e("input#capchaCode").val()),success:function(t){if("SuccessRegister"==t){var n=e("base").attr("href"),i=n.lastIndexOf("#");0!=i&&(n=n.substring(0,i)),window.location=e("base").attr(n)}else e("div.message").css("display","block").html(t)}}),!1}}),e("form#accountinfomation").validate({errorElement:"div",onfocusout:function(e){this.element(e)},onkeyup:!1,groups:{birthday:"BirthDate_Day BirthDate_Month BirthDate_Year"},errorPlacement:function(e,t){var n=t.prop("name");"BirthDate_Day"===n||"BirthDate_Month"===n||"BirthDate_Year"===n||e.insertAfter(t)},rules:{txtEmail:{required:!0,email:!0,remote:{ajax:"yes",url:"/check-email",type:"post",dataType:"json",data:{txtEmail:function(){return e("#txtEmail").val()},id:function(){return e("input#id").val()}}}},Gender:"required",txtName:"required",BirthDate_Day:"required",BirthDate_Month:"required",BirthDate_Year:"required",txtPhone:"required"},messages:{txtEmail:{required:"Vui lòng nhập email !",email:"Email không hợp lệ !",remote:"Email này đã được sử dụng !"},Gender:"Vui lòng chọn giới tính !",txtName:"Vui lòng nhập họ tên !",BirthDate_Day:"Vui lòng chọn ngày sinh hợp lệ !",BirthDate_Month:"Vui lòng chọn ngày sinh hợp lệ !",BirthDate_Year:"Vui lòng chọn ngày sinh hợp lệ !",txtPhone:"Vui lòng nhập Số điện thoại !"},submitHandler:function(){return e.ajax({ajax:"yes",url:"tai-khoan/thong-tin",type:"post",data:"id="+encodeURI(e("input#id").val())+"&txtEmail="+encodeURI(e("input#txtEmail").val())+"&Gender="+encodeURI(e("input#Gender:checked").val())+"&txtName="+encodeURI(e("input#txtName").val())+"&BirthDate_Day="+encodeURI(e("select#BirthDate_Day").val())+"&BirthDate_Month="+encodeURI(e("select#BirthDate_Month").val())+"&BirthDate_Year="+encodeURI(e("select#BirthDate_Year").val())+"&txtPhone="+encodeURI(e("input#txtPhone").val())+"&submit=submit",success:function(t){"1"==t?window.location.reload():e("div.message").css("display","block").html(t)}}),!1}}),e("form#Fchangepass").validate({errorElement:"div",onfocusout:function(e){this.element(e)},onkeyup:!1,rules:{txtPass:"required",txtNewPass:{required:!0,minlength:6,maxlength:20},txtReNewPass:{required:!0,equalTo:"#txtNewPass"}},messages:{txtPass:"Vui lòng nhập mật khẩu cũ !",txtNewPass:{required:"Vui lòng nhập mật khẩu mới !",minlength:"Mật khẩu ít nhất 6 kí tự !",maxlength:"Mật khẩu tối đa 20 kí tự !"},txtReNewPass:{required:"Vui lòng nhập mật khẩu mới !",equalTo:"Mật khẩu mới nhập lại không đúng !"}},submitHandler:function(){return e.ajax({ajax:"yes",url:"tai-khoan/doi-mat-khau",type:"post",data:"id="+encodeURI(e("input#id").val())+"&txtPass="+encodeURI(e("input#txtPass").val())+"&txtNewPass="+encodeURI(e("input#txtNewPass").val())+"&txtReNewPass="+encodeURI(e("input#txtReNewPass").val())+"&submit=submit&csrf_test_name="+e("input[name=csrf_test_name]").val(),success:function(t){"1"==t?window.location.reload():e("div.message").css({color:"red"}).html(t)}}),!1}}),e("form#FAddress").validate({errorElement:"div",onfocusout:function(e){this.element(e)},onkeyup:!1,rules:{txtAddress:"required",sltCity:"required",sltDistrict:"required"},messages:{txtAddress:"Vui lòng nhập địa chỉ !",sltCity:"Vui lòng chọn thành phố !",sltDistrict:"Vui lòng chọn quận(huyện) !"},submitHandler:function(){return e.ajax({ajax:"yes",url:"tai-khoan",type:"post",data:"id="+encodeURI(e("input#id").val())+"&txtAddress="+encodeURI(e("input#txtAddress").val())+"&sltCity="+encodeURI(e("select#sltCity").val())+"&sltDistrict="+encodeURI(e("select#sltDistrict").val())+"&submit=submit&csrf_test_name="+e("input[name=csrf_test_name]").val(),success:function(t){1==t?window.location.reload():e("div.message").css("display","block").html(t)}}),!1}}),e("form#FormLogin").validate({errorElement:"div",onfocusout:function(e){this.element(e)},onkeyup:!1,rules:{txtEmailLogin:{required:!0,email:!0},txtPass:"required"},messages:{txtEmailLogin:{required:"Vui lòng nhập email !",email:"Email không hợp lệ !"},txtPass:"Vui lòng nhập mật khẩu !"},submitHandler:function(){if(e("input#Remember").is(":checked"))var t=1;else var t=0;return e.ajax({ajax:"yes",url:"/dang-nhap",type:"post",data:"txtEmail="+encodeURI(e("input#txtEmailLogin").val())+"&txtPass="+encodeURI(e("input#txtPass").val())+"&btnLogin=btnLogin&csrf_test_name="+e("input[name=csrf_test_name]").val()+"&remember="+encodeURI(t)+"&type="+encodeURI(e("input#cacheLoginCart").val()),success:function(t){if(1==t){var n=window.location.href;n=n.replace("?login=signin",""),n=n.replace("?login=signup","");var i=n.lastIndexOf("#");0!=i&&(n=n.substring(0,i)),window.location=n+"?login=true"}else e("div.message").css("display","block").html(t)}}),!1}}),e("form#FormComment").validate({errorElement:"div",onfocusout:function(e){this.element(e)},onkeyup:!1,ignore:[],rules:{txtTitle:{required:{depends:function(){return e(this).val(e.trim(e(this).val())),!0}},maxlength:150},txtComment:{required:{depends:function(){return e(this).val(e.trim(e(this).val())),!0}},minlength:15,maxlength:1e3},cachestar:"required"},messages:{cachestar:"! Vui lòng chọn đánh giá ",txtTitle:{required:"Vui lòng nhập tiêu đề !",maxlength:"Tối đa là 150 ký tự"},txtComment:{required:"Vui lòng nhập nội dung !",minlength:"Tối thiểu là 15 ký tự",maxlength:"Tối đa là 1000 ký tự"}},submitHandler:function(){return e("div#txtComment-error").html("abcdef"),e.ajax({ajax:"yes",url:"/binh-luan",type:"post",async:!0,data:"id="+encodeURI(e("input#pid").val())+"&txtTitle="+encodeURI(e("input#txtTitle").val())+"&comment="+encodeURI(e("textarea#txtComment").val())+"&submit=submit&csrf_test_name="+e("input[name=csrf_test_name]").val()+"&star="+encodeURI(e("input#cachestar").val()),dataType:"json",success:function(t){1==t.flash?(document.FormComment.reset(),e("div.message").css({display:"block",color:"red","margin-bottom":"10px"}).html(t.error)):(ga("send","event",{eventCategory:"Product ratiing",eventAction:"Submit"}),e("div.message").css({display:"block","margin-bottom":"10px"}).html(t.message),document.FormComment.reset())}}),!1}})});
+function malert(msg, title, callback, sbcallback) {
+    title = title || 'Thông báo';
+    callback = callback || function (e) {};
+
+    if (jQuery("#modal_alert").attr('id') != 'modal_alert') {
+        var html = ''+
+            '<div class="modal fade" id="modal_alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' +
+            '<div class="modal-dialog" role="document">' +
+            '<div class="modal-content">' +
+            '<div class="modal-header">' +
+            '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+            '<h4 class="modal-title" id="myModalLabel">Thông báo</h4>' +
+            '</div>' +
+            '<div class="modal-body">' +
+            '<p>Thành công!</p>' +
+            '</div>' +
+            '<div class="modal-footer">' +
+            '<button type="button" class="btn btn-success">Đồng ý</button>' +
+            '<button type="button" class="btn btn-default" data-dismiss="modal">Thoát</button>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+
+        jQuery( "body" ).append(html);
+    }
+    $("#modal_alert .btn-success").unbind( "click" );
+    if (sbcallback) {
+        $("#modal_alert .modal-footer").show();
+        $("#modal_alert .btn-success").bind( "click", sbcallback );
+    } else {
+        $("#modal_alert .modal-footer").hide();
+    }
+
+    jQuery("#myModalLabel").html(title);
+    jQuery("#modal_alert .modal-body").html('<p>'+msg+'</p>');
+
+    jQuery('#modal_alert').modal('show');
+    jQuery('#modal_alert').on('hidden.bs.modal', callback);
+}
+
+function readURL(input) {
+	if (input.files && input.files[0]) {
+	  	var reader = new FileReader();
+
+	  	reader.onload = function (e) {
+	  		$('#blah').attr('src', e.target.result)
+		    	.width(150)
+		    	.height(200);
+		};
+
+		reader.readAsDataURL(input.files[0]);
+	}
+}
+
+function init_account_info() {
+    $('.birth-date').datepicker({});
+
+    $('input[type="file"]').change(function(e) {
+      var fileName = e.target.files[0].name;
+      if(fileName!=""){
+        $(".upload_img").hide();
+        $(".update_img").show();
+      }
+      else {
+        $(".upload_img").show();
+        $(".update_img").hide();
+      }
+    });
+
+    $('#male').click(function(){
+      $(this).attr('class','active-btn');
+      $('#female').attr('class','');
+      
+      $('#gender_value').val($(this).attr('value'));
+    });
+
+    $('#female').click(function(){
+      $(this).attr('class','active-btn');
+      $('#male').attr('class','');
+
+      $('#gender_value').val($(this).attr('value'));
+    });
+
+    $('form.account-information').validate({
+      errorElement: 'p',
+      rules: {
+          txtName: {
+              required: true,
+          },
+          BirthDate: {
+              required: true,
+          },
+          txtPhone: {
+              required : true
+          },
+          txtEmail: {
+              required: true,
+          }
+      },
+      messages: {
+          txtName: {
+              required: 'Vui lòng nhập Họ và tên'
+          },
+          BirthDate: {
+              required: 'Vui lòng chọn ngày sinh',
+          },
+          txtPhone: {
+              required: 'Vui lòng nhập số điện thoại',
+          },
+          txtEmail: {
+              required: 'Vui lòng nhập email',
+          }
+      },
+      submitHandler: function(form) {
+          $('form.account-information').submit();
+          return false;
+      }//end submit
+    });
+}		

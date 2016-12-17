@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" class="no-js ie ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>myMall</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/icon/favicon.ico"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/global.css">
+  </head>
+  <body class="home">
+    <header>
+      <div class="container">
+        <div class="header-top">
+          <div class="col-md-2 logo-humburger">
+            <a href="javascript:void(0);" title="" class="logo">
+              <img src="images/logo.png" class="img-responsive" alt="">
+            </a>
+            <a title="" data-toggle="collapse" href="#" aria-expanded="false" aria-controls="collapseExample" class=" humburger collapsed humburger1">
+            </a>
+          </div>
+          <div class="row" id="first-header">
+            <div class="col-md-6" >
+              <form class="form-search dropdown" id="collapse-form">
+              <a href="javascript:void(0);" title="" type="button" data-toggle="dropdown" class="btn btn-all dropdown-toggle"><span class="text">Tất cả</span><span class="fa fa-angle-down"></span></a>
+                <div role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                  <div class="form-box">
+                    <ul>
+                      <li>text1</li>
+                      <li>text2</li>
+                      <li>text3</li>
+                    </ul>
+                  </div>
+                </div>
+                <input type="text" placeholder="Xu hướng tìm: Note 7, Mi brand 2, son duong moi..." class="form-control">
+                <button type="submit" class="btn btn-search"><span class="fa fa-search"></span></button>
+              </form>
+            </div>
+            <div class="col-md-4 clearfix group-dropdown">
+              <div class="dropdown dropdown-follow"><a href="javascript:void(0);" title="" type="button" data-toggle="dropdown" class="dropdown-toggle pull-left link-follow"><span class="fa fa-map-marker"></span><span class="text">Theo dõi đơn hàng</span></a>
+                <div role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                  <div class="form-box form-follow">
+                    <h4>Theo dõi đơn hàng</h4>
+                    <form class="search">
+                      <input placeholder="Bạn nhập mã đơn hàng vào đây ..." class="form-control">
+                      <button class="btn btn-search"><span class="fa fa-chevron-right"></span></button>
+                    </form>
+                    <p>myMall khuyến khích bạn <a href="javascript:void(0);" title="" class="link">đăng nhập</a>để không cần phải nhớ Mã đơn hàng</p>
+                    <p class="italic"><i>Bạn có thắc mắc? </i><a href="javascript:void(0);" title="" class="link">Nhấp vào đây.</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="login dropdown"><a href="javascript:void(0);" title="" type="button" data-toggle="dropdown" class="dropdown-toggle"><span class="icon icon-user"></span><span>Chào bạn   </span><span class="caret"></span></a>
+                <div role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                  <div class="form-box form-login form-logged">
+                    <ul>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-user"></span><span class="text">Quản lý tài khoản</span></a></li>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-cart-copy"></span><span class="text">Theo dõi đơn hàng</span></a></li>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-dollar"></span><span class="text">myXu của tôi</span></a></li>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-heart"></span><span class="text">Sản phẩm yêu thích</span></a></li>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-file"></span><span class="text">Thông tin tài khoản</span></a></li>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-clock"></span><span class="text">Thay đổi mật khẩu</span></a></li>
+                      <li><a href="javascript:void(0);" title=""><span class="icon-close"></span><span class="text">Thoát</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="cart dropdown"><a href="javascript:void(0);" title="" type="button" data-toggle="dropdown" class="dropdown-toggle"><img src="images/cart.png" alt=""><span class="number">6</span></a>
+                <div role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                  <div class="form-box form-box-cart">
+                    <div class="form-head clearfix">
+                      <h4 class="pull-left">Bạn có (0) trong giỏ hàng</h4><a href="javascript:void(0);" title="" class="btn btn-orange pull-right">Đặt hàng</a>
+                    </div>
+                    <div class="form-body">
+                      <p class="orange">Bạn có muốn mua?</p>
+                      <ul class="list-square">
+                        <li><a href="javascript:void(0);" title="">Sản phẩm khuyến mại Hot nhất</a></li>
+                        <li><a href="javascript:void(0);" title="">Top 50 sản phẩm tốt nhất</a></li>
+                        <li><a href="javascript:void(0);" title="">Xu hướng mới nhất</a></li>
+                        <li><a href="javascript:void(0);" title="">Chỉ có tại myMall</a></li>
+                        <li><a href="javascript:void(0);" title="">Hàng cao cấp chính hãng</a></li>
+                      </ul>
+                    </div>
+                    <div class="form-footer clearfix">
+                      <p class="pull-left">Tạm tính </p>
+                      <p class="total-price pull-right">0 đ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- scroll and display =================================== -->
+          <div class="row" id="collapse-scroll">
+            <div class="col-md-6" >
+              <div id="detail-collapse">
+                <p>Xà Bông Rửa Mặt Hoa Anh Đào Face Soap Cherry Blossom</p>
+                <div class="price">
+                  <p>337.000đ</p><span>398.000đ</span><span class="sale">(-36%)</span>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 clearfix header-order">
+              <hr class="slash-line"></hr>
+              <div class="order">
+                <a href="#"><i class="icon-order"></i> <div class="order_">ĐẶT HÀNG</div></a>
+              </div>
+              <div class="like">
+                <i class="fa fa-heart-o heart" aria-hidden="true"></i>
+                <i class="fa fa-heart heart" aria-hidden="true"></i>
+                <div>Thích sản phẩm này</div>
+              </div>
+            </div>
+          </div>
+          <!-- =============================== -->
+        </div>
+      </div>
+      <div id="collapseExample">
+        <div class="container">
+          <div class="wrap-slider clearfix">
+            <div class="slider">
+              <div id="owl-demo" class="owl-carousel owl-theme">
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="0">Phụ Kiện Điện Tử</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="1">Tã & Sữa</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="2">Văn Phòng Phẩm</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="3">Mẹ & Bé</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="4">Thiết bị gia đình</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="5">Thể thao dã ngoại</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="6">Laptop & máy tính</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="7">Điện thoại & Tablet</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="8">Máy ảnh & Máy Quayphim</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="9">Thiết bị Nghe nhìn</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="10">Thực Phẩm (Focus Bánh)</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="11">Sức Khỏe & Làm Đẹp</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="12">Thời Trang</a></div>
+                <div class="item"> <a href="javascript:void(0);" title="" data-id="13">eBook</a></div>
+              </div>
+            </div>
+            <div class="next-pre">
+              <div class="customNavigation"><a href="javascript:void(0);" title="" class="btn prev"><span class="fa fa-angle-left"></span></a><a href="javascript:void(0);" title="" class="btn next"><span class="fa fa-angle-right"></span></a></div>
+            </div>
+          </div>
+          <div class="menu-content">
+            <div class="sub-content">
+              <div class="row">
+                <div class="col-md-3">
+                  <h4>Ngành hàng Tã - sửa</h4>
+                  <ul>
+                    <li><a href="javascript:void(0);" title=""><span class="text"> Tã<i>(1.236)</i></span></a></li>
+                    <li><a href="javascript:void(0);" title=""><span class="text"> Sữa<i>(1.236)</i></span></a></li>
+                    <li class="dropdown">
+                      <button type="button" id="menu1" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="text">Sản phẩm khác <i>(1378)</i></span><span class="fa fa-angle-right"></span></button>
+                      <ul role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                        <li role="presentation"><a href="javascript:void(0);" title=""><span class="text"> Áo em bé<i>(1.236)</i></span></a></li>
+                        <li role="presentation"><a href="javascript:void(0);" title=""><span class="text"> Áo em bé<i>(1.236)</i></span></a></li>
+                        <li role="presentation"><a href="javascript:void(0);" title=""><span class="text"> Áo em bé<i>(1.236)</i></span></a></li>
+                        <li role="presentation"><a href="javascript:void(0);" title=""><span class="text"> Áo em bé<i>(1.236)</i></span></a></li>
+                        <li role="presentation"><a href="javascript:void(0);" title=""><span class="text"> Áo em bé<i>(1.236)</i></span></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-3">
+                  <h4>Xu hướng tìm kiếm</h4>
+                  <ul>
+                    <li><a href="javascript:void(0);" title=""> Sữa công thức Similac</a></li>
+                    <li><a href="javascript:void(0);" title="">Friso Gold 4</a></li>
+                    <li><a href="javascript:void(0);" title="">Sữa dành cho bé thiếu tháng</a></li>
+                    <li><a href="javascript:void(0);" title="">Tã dán Jumbo</a></li>
+                    <li><a href="javascript:void(0);" title="">Bỉm Goo.N</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2">
+                  <h4>Thương hiệu</h4>
+                  <ul>
+                    <li><a href="javascript:void(0);" title="">Meiji</a></li>
+                    <li><a href="javascript:void(0);" title="">Glico - Icreo</a></li>
+                    <li><a href="javascript:void(0);" title="">Pediasure</a></li>
+                    <li><a href="javascript:void(0);" title="">Similac</a></li>
+                    <li><a href="javascript:void(0);" title="">Grand Noble</a></li>
+                    <li><a href="javascript:void(0);" title="">Enfa</a></li>
+                    <li><a href="javascript:void(0);" title="">XO</a></li>
+                    <li><a href="javascript:void(0);" title="">Friso</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <h4>Khuyến mại</h4><a href="javascript:void(0);" title="" class="link-img"><img src="images/upload/banner/banner-menu.png" alt=""></a>
+                </div>
+              </div>
+            </div>
+            <div class="sub-content">content 1</div>
+            <div class="sub-content">content 2</div>
+            <div class="sub-content">content 3</div>
+            <div class="sub-content">content 4</div>
+            <div class="sub-content">content 5</div>
+            <div class="sub-content">content 6</div>
+            <div class="sub-content">content 7</div>
+            <div class="sub-content">content 8</div>
+            <div class="sub-content">content 9</div>
+            <div class="sub-content">content 10</div>
+            <div class="sub-content">content 11</div>
+            <div class="sub-content">content 12</div>
+            <div class="sub-content">content 13</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="banner"></div>
+    <main id="main">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0);" title="">myMall.vn</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0);" title="">Làm đẹp</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0);" title="">Trang điểm</a></li>
+          <li class="breadcrumb-item active"><a href="javascript:void(0);" title="">Xà Bông Rửa Mặt Hoa Anh Đào Face Soap Cherry Blossom </a></li>
+        </ol>
+        <div class="title">
+          <h2>Xà bông rửa mặt hoa anh đào face soap cherry blossom</h2>
+          <p >Nằm trong <a href="#" title="">Top 30 sản phẩm làm đẹp trong tuần qua</a></p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <!-- main picture ============================================== -->
+              <div class="picZoomer">
+                  <img src="images/image-detail.png" height="480" width="554" alt="">
+              </div>
+              <ul class="piclist gallery" id="Gallery">
+                  <li><img src="images/item-2.png" alt=""></li>
+                  <li><img src="images/item-3.png" alt=""></li>
+                  <li><img src="images/item-4.png" alt=""></li>
+                  <li><img src="images/item-5.png" alt=""></li>
+                  <li><img src="images/item-6.png" alt=""></li>
+                  <li><img src="images/item-7.png" alt=""></li>
+                  <li><img src="images/item-6.png" alt=""></li>
+                  <li><img src="images/item-7.png" alt=""></li>
+                  <li><img src="images/item-6.png" alt=""></li>
+              </ul>
+              <div class="icon-click-list">
+                <i class="fa fa-angle-left" aria-hidden="true" id="prev"></i>
+                <i class="fa fa-angle-right" aria-hidden="true" id="next"></i>
+              </div>
+              <!-- ============================= -->
+            <p class="note"><b>Lưu ý:</b> sản phẩm thực tế có thể khác với mô ta tùy từng lô hàng, nhưng vẫn đảm bảo chi tiêu chất lượng & ổn định tác dung.</p>
+            <a href="#"><img src="images/icon-facebook.png" alt=""></a>
+            </div>
+          <div class="col-md-6 product-info">
+            <div class="clearfix">
+              <div class="detail-trademark pull-left">
+                <p><span class="fa fa-star-half-full star_"></span><span class="star">Thương hiệu</span></p><a href="javascript:void(0);" title=""><img src="images/trademark1.png" alt=""></a>
+              </div>
+              <div class="product-apply-by pull-left">
+                <p>Sản phẩm cung cấp bởi</p><a href="javascript:void(0);" title="">myMall Vietnam</a>
+              </div>
+            </div>
+            <div class="des">
+              <ul>
+                <li>
+                  <span class="text-list"> Thành phần chứa chiết xuất từ hoa Anh Đào, Dâu Tằm kết hợp với tinh dầu Olive, Glycerine.</span>
+                </li>
+                <li>
+                  <span class="text-list"> Làm sạch da, cung cấp độ ẩm và dưỡng da trắng sáng, mịn màng.</span>
+                </li>
+                <li>
+                  <span class="text-list"> Sản phẩm an toàn với mọi loại da.</span>
+                </li>
+                <li>
+                  <span class="text-list">Sản xuất tại Việt Nam.</span>
+                </li>
+                <li>
+                  <span class="text-list"> Thành phần chứa chiết xuất từ hoa Anh Đào, Dâu Tằm kết hợp với tinh dầu Olive, Glycerine.</span>
+                </li>
+                <li>
+                  <span class="text-list"> Làm sạch da, cung cấp độ ẩm và dưỡng da trắng sáng, mịn màng.</span>
+                </li>
+                <li>
+                  <span class="text-list"> Sản phẩm an toàn với mọi loại da.</span>
+                </li>
+                <li>
+                  <span class="text-list">Sản xuất tại Việt Nam.</span>
+                </li>
+              </ul>
+              <a id="seemore" href="javascript:void(0);" title="">Xem thêm ...</a>
+              <a id="collapse" href="javascript:void(0);" title="">Thu gọn ...</a>
+              <div class="box-price">
+                <p><span class="price-green">337.000<sup>đ</sup></span><span class="free-ship">Miễn phí vận chuyển</span><span class="myxu">Tích luỹ thêm: <span class="text-orange bold-myxu">3.370 </span><span class="bold-myxu">myXu</span> </span></p>
+                <p><span class="text-through">398.000<sup>đ</sup></span><span class="text-green">(-36%) </span></p>
+              </div>
+            </div>
+            <div class="choose choose-color">
+              <label>Chọn màu sắc</label>
+              <!-- list color -->
+              <ul class="total-btn">
+                <li><a href="javascript:void(0);" title="">Cam</a></li>
+                <li><a href="javascript:void(0);" title="">Vàng</a></li>
+                <li><a href="javascript:void(0);" title="">Tím</a></li>
+                <li><a href="javascript:void(0);" title=""><div class="boxs">Xanh Dương</div></a></li>
+                <li><a href="javascript:void(0);" title=""><div class="boxs">Xanh Ngọc Bích</div></a></li>
+                <li><a href="javascript:void(0);" title=""><div class="boxs">Hồng Ngọc</div></a></li>
+              </ul>
+            </div>
+            <div class="choose choose-size">
+              <label>Chọn size</label>
+              <!-- list size -->
+              <ul class="total-btn2">
+                <li><a href="javascript:void(0);" title="">S</a></li>
+                <li><a href="javascript:void(0);" title="">M</a></li>
+                <li><a href="javascript:void(0);" title="">L</a></li>
+                <li><a href="javascript:void(0);" title="">32</a></li>
+                <li><a href="javascript:void(0);" title="">34</a></li>
+              </ul>
+            </div>
+            <div class="choose choose-number">
+              <label>Chọn số lượng</label>
+              <input class="input_number" id="number" type="text" value="0"/>
+              <div class="icon-arrow">
+                <i class="fa fa-caret-up" aria-hidden="true" id="increase"></i>
+                <i class="fa fa-caret-down" aria-hidden="true" id="decrease"></i>
+              </div>
+              <span>Còn <span class="sl">40</span> sản phẩm</span>
+            </div>
+            <div class="choose choose-place">
+              <label>Vận chuyển</label>
+              <select class="drop_place" id="resizing_select">
+                <option>Da Nang</option>
+                <option>Thành phố Hồ Chí Minh</option>
+                <option>Ha Noi</option>
+              </select>
+              <select id="width_tmp_select">
+                <option id="width_tmp_option"></option>
+              </select>
+              <span>Từ 2 - 3 ngày</span>
+            </div>
+            <div class="order">
+              <a href="#"><i class="icon-order"></i> <div class="order_">ĐẶT HÀNG</div></a>
+            </div>
+            <div class="like">
+              <i class="fa fa-heart-o heart" aria-hidden="true"></i>
+              <i class="fa fa-heart heart" aria-hidden="true"></i>
+              <div>Thích sản phẩm này</div>
+            </div>
+            <div class="choose goods-together">
+              <label class="lb-together">Sản phẩm này được tặng kèm:</label>
+              <ul class="list-sale">
+                <li class="sale-item">
+                  <img src="images/sale-goods.png" alt="">
+                  <a class="detail">Son dưỡng môi cao cấp Cherry Blossom cao cấp</a>
+                  <div class="detail-price">Trị giá: <span class="price">90.000đ</span></div>
+                </li>
+                <li class="sale-item">
+                  <img src="images/sale-goods.png" alt="">
+                  <a class="detail">Son dưỡng môi cao cấp Cherry Blossom cao cấp</a>
+                  <div class="detail-price">Trị giá: <span class="price">90.000đ</span></div>
+                </li>
+              </ul>
+              <div class="wrap-banner">
+                <a class="banner-sale" href="#"><img src="images/banner-sale1.png" alt=""></a>
+                <a class="banner-sale" href="#"><img src="images/banner-sale-2.png" alt=""></a>
+                <a class="banner-sale" href="#"><img src="images/banner-sale-3.png" alt=""></a>
+              </div>
+            </div>
+        </div>
+        <ul class="list-info">
+          <li class="item-info">
+            <i class="icon-sale-goods"></i>
+            <div>Giao hàng toàn quốc</div>
+          </li>
+          <li class="item-info">
+            <i class="icon-change1"></i>
+            <div>Đổi trả trong 07 ngày</div>
+          </li>
+          <li class="item-info">
+            <i class="icon-transport"></i>
+            <div>Miễn phí vận chuyển TP.HCM đơn hàng trên 150.000đ</div>
+          </li>
+          <li class="item-info">
+            <i class="icon-transport"></i>
+            <div>Miễn phí vận chuyển toàn quốc đơn hàng trên 300.000đ</div>
+          </li>
+          <li class="item-info">
+            <i class="fa fa-phone icon-phone" aria-hidden="true"></i>
+            <div>Gọi <a href="tel:1900636088" class="price">1900-636-088</a> để được đặt hàng miễn phí</div>
+          </li>
+        </ul>
+      </div>
+      <!-- end part 1 -->
+      </div>
+      <!-- <hr class="boder-boottom"></hr> -->
+      <div class="introduce-goods container ">
+      <div class="main-content">
+        <div class="intro-use-detail">
+          <ul class="tab border-hr">
+            <li><a href="#introduce-product" class="tablinks" onclick="openCity(event, 'introduce')">Giới thiệu sản phẩm</a></li>
+            <li><a href="#information-product" class="tablinks" onclick="openCity(event, 'goods-information')">Thông số sản phẩm</a></li>
+            <li><a href="#command-product" class="tablinks" onclick="openCity(event, 'commend')">Bình luận<span class="number">(3)</span></a></li>
+          </ul>
+            <div id="introduce" class="tabcontent">
+            <div id="introduce-product">
+               <h3 class="sub-title">Giới thiệu sản phẩm</h3>
+                <p class="description">Xà Bông Rửa Mặt Hoa Anh Đào Face Soap Cherry Blossom - Purite By Provence PVC-07-014 - Chiết xuất hoàn toàn từ những thành phần dưỡng chất tự nhiên, nuôi dưỡng da từ sâu bên trong, giúp da luôn sáng khỏe, mịn màng tự nhiên</p>
+                <img class="img-use" src="images/img-intro-detail.png" alt="">
+                <p class="title-use">Công dụng:</p>
+                <ul class="list-use">
+                  <li class="item-use">
+                    <span class="text-list">Xà Bông Rửa Mặt Hoa Anh Đào Face Soap Cherry Blossom - Purite By Provence làm sạch nhẹ nhàng các bã nhờn, kháng khuẩn, giúp da luôn tươi trẻ, mềm mại một cách tự nhiên</span>
+                  </li>
+                  <li class="item-use">
+                    <span class="text-list">Sản phẩm dạng bánh, nhỏ, gọn, dễ sử dụng, hương thơm thư giãn dịu nhẹ</span>
+                  </li>
+                  <li class="item-use">
+                    <span class="text-list">Với nhiều dưỡng chất tự nhiên sản phẩm còn có thể cung cấp độ ẩm, ngăn ngừa sự mất nước</span>
+                  </li>
+                  <li class="item-use">
+                    <span class="text-list">Thích hợp cho mọi loại da</span>
+                  </li>
+                </ul>
+                <img class="img-use" src="images/img-use-detail.png" alt="">
+                <p class="title-use">Hướng dẫn sử dụng:</p>
+                <p>Làm ướt da mặt, xoa đều xà bông vào giữa hai lòng bàn tay đang ướt để tạo bọt. Thoa và massage đều lượng bọt lên mặt rồi rửa lại bằng nước sạch</p>
+                <img class="img-use" src="images/wash-face.png" alt="">
+                <p class="title-use">Thông tin thương hiệu:</p>
+                <p>Prôvence là một thương hiệu quốc tế, chuyên về các sản phẩm làm đẹp từ thiên nhiên đã làm mê hoặc các phụ nữ trên toàn thế giới. Purité By Prôvence được biết đến như những gì tinh túy, tự nhiên và trong lành nhất nước Pháp, tự thân nó cũng là một “câu chuyện làm đẹp”, một biểu tượng cho vẻ đẹp thuần khiết tự nhiên!</p>
+                <br>
+                <p>Tất cả những loại tinh dầu, tinh chất từ hoa Oải Hương, Olive, hoa Hướng Dương tạo nên tên tuổi của thương hiệu Purite By Provence đều được trồng từ vùng đất Provence danh tiếng. Một số nguyên liệu khác như Hoa Hồng được mang về từ các vùng đất nổi tiếng khác của nước Pháp. Tất cả những tinh túy này đã tạo nên danh tiếng cho vùng đất Provence hàng ngàn năm qua, cũng như thương hiệu Purité By Prôvence ngày nay.</p>
+              </div>
+            <!-- end part introduce product -->
+           <div id="information-product">
+              <p class="title-color">Thông số sản phẩm:</p>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>SKU</td>
+                    <td>SPATDTT0000210</td>
+                  </tr>
+                  <tr>
+                    <td>Thương hiệu</td>
+                    <td>Purite By Provence</td>
+                  </tr>
+                  <tr>
+                    <td>Danh mục</td>
+                    <td>Tẩy trang</td>
+                  </tr>
+                  <tr>
+                    <td>Tên sản phẩm</td>
+                    <td>Xà Bông Rửa Mặt Hoa Anh Đào Face Soap Cherry Blossom - Purite By Provence PVC-07-014</td>
+                  </tr>
+                  <tr>
+                    <td>Xuất xứ thương hiệu</td>
+                    <td>Pháp</td>
+                  </tr>
+                  <tr>
+                    <td>Trọng lượng sản phẩm kèm bao bì</td>
+                    <td>50 grams</td>
+                  </tr>
+                  <tr>
+                    <td>Trọng lượng vận chuyển ước tính</td>
+                    <td>200 grams</td>
+                  </tr>
+                  <tr>
+                    <td>Thành phần</td>
+                    <td>Hoa anh đào</td>
+                  </tr>
+                  <tr>
+                    <td>Hạn sử dụng</td>
+                    <td>In trên bao bì sản phẩm</td>
+                  </tr>
+                </tbody>
+              </table>
+             </div>
+           <!-- end part information product -->
+           <div id="command-product">
+              <p class="error">Bạn chưa nhập nội dung bình luận</p>
+              <div class="style-textarea">
+              <textarea id="styled" placeholder=''></textarea>
+              <div class="text_area">
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                <p class="text-area">Mời bạn để lại bình luận sản phẩm</p>
+                <i class="fa fa-quote-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <p class="error">Bạn chưa nhập họ tên (*)</p>
+            <input class="input-text" type="text" placeholder="Nhập họ tên bạn (bắt buộc)"></input>
+            <p class="error email">Sai định dạng email</p>
+            <input class="input-text" type="email" placeholder="Email"></input>
+            <input type="button" class="send" value="Gửi bình luận"></input>
+            <div class="commend-detail">
+              <p class="name-person">Trần Thị Cẩm Liên</p> <span class="date"> - lúc 26/08/2016 08:36</span>
+              <p class="idea">Rất hài lòng về sản phẩm và cách giao hàng đóng gói cẩn thận của myMall. Tuy nhiên giao hàng hơi chậm, nhưng cũng có thể chấp nhận được. Mình dùng sản phẩm này đã 3 ngày, chất lượng tốt, ok.
+              Chúc myMall sẻ có nhìu khách hàng ủng hộ :)</p>
+              <div class="reply" id="first-click">
+                <i class="fa fa-reply" aria-hidden="true"></i> <span>Trả lời</span>
+              </div>
+              <div class="like-command" id="like-command1">
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span>Thích</span>
+              </div>
+              <div class="liked-command" id="liked-command1">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> <span>Không thích</span>
+              </div>
+              <div class="sub-reply"  id="first-reply">
+                <div class="txtarea-reply">
+                  <textarea class="bg-textarea" placeholder='Nhập nội dung trả lời ...'></textarea>
+                </div>
+                
+                <input class="input-text" type="text" placeholder="Nhập họ tên bạn (bắt buộc)"></input>
+                <input class="input-text" type="email" placeholder="Email"></input>
+                <a href="#" class="first-cancel">Bỏ qua</a>
+                <input class="btn-reply" type="button" value="Trả lời"></input>
+              </div>
+              <div class="subreply-person first-reply">
+                <p class="name-person reply-person ">Thúy</p> <span class="date"> - lúc 26/08/2016 08:36</span>
+                <p>Dùng có bị kích ứng da không chị?</p>
+              </div>
+              <div class="subreply-person second-reply">
+                <p class="name-person reply-person">Mỹ Linh</p> <span class="date"> - lúc 26/08/2016 08:36</span>
+                <p>Cũng tốt, dùng vào thấy sạch ra.
+                Da nào cũng OK, mình mới đặt 3 hộp nữa.</p>
+              </div>
+            </div>
+            <hr>
+            <!-- end first reply  -->
+            <div class="commend-detail">
+              <p class="name-person">Trúc</p> <span class="date"> - lúc 26/08/2016 08:36</span>
+              <p class="idea">Rất hài lòng về sản phẩm và cách giao hàng đóng gói cẩn thận của myMall. Tuy nhiên giao hàng hơi chậm, nhưng cũng có thể chấp nhận được. Mình dùng sản phẩm này đã 3 ngày, chất lượng tốt, ok.
+              Chúc myMall sẻ có nhìu khách hàng ủng hộ :)</p>
+              <div class="reply" id="second-click">
+                <i class="fa fa-reply" aria-hidden="true"></i> <span>Trả lời</span>
+              </div>
+              <div class="like-command" id="like-command2">
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span>Thích</span>
+              </div>
+              <div class="liked-command" id="liked-command2">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> <span>Không thích</span>
+              </div>
+              <div class="sub-reply" id="second-reply">
+                <div class="txtarea-reply">
+                  <textarea class="bg-textarea" placeholder='Nhập nội dung trả lời ...'></textarea>
+                </div>
+                <input class="input-text" type="text" placeholder="Nhập họ tên bạn (bắt buộc)"></input>
+                <input class="input-text" type="email" placeholder="Email"></input>
+                <a href="#" class="second-cancel">Bỏ qua</a>
+                <input class="btn-reply" type="button" value="Trả lời"></input>
+              </div>
+              <div class="subreply-person first-reply">
+                <p class="name-person reply-person">Thúy</p> <span class="date"> - lúc 26/08/2016 08:36</span>
+                <p>Dùng có bị kích ứng da không chị?</p>
+              </div>
+              <div class="subreply-person second-reply">
+                <p class="name-person reply-person">Mỹ Linh</p> <span class="date"> - lúc 26/08/2016 08:36</span>
+                <p>Cũng tốt, dùng vào thấy sạch ra.
+                Da nào cũng OK, mình mới đặt 3 hộp nữa.</p>
+              </div>
+            </div>
+            <hr>
+            <!-- end second reply -->
+            <div class="commend-detail">
+              <p class="name-person">Kỳ Duyên</p> <span class="date">- lúc 26/08/2016 08:36</span>
+              <p class="idea">Rất hài lòng về sản phẩm và cách giao hàng đóng gói cẩn thận của myMall. Tuy nhiên giao hàng hơi chậm, nhưng cũng có thể chấp nhận được.</p>
+              <div class="reply" id="third-click">
+                <i class="fa fa-reply" aria-hidden="true"></i> <span>Trả lời</span>
+              </div>
+              <div class="like-command" id="like-command3">
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span>Thích</span>
+              </div>
+              <div class="liked-command" id="liked-command3">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> <span>Không thích</span>
+              </div>
+              <div class="sub-reply" id="third-reply">
+                 <div class="txtarea-reply">
+                  <textarea class="bg-textarea" placeholder='Nhập nội dung trả lời ...'></textarea>
+                </div>
+                <input class="input-text" type="text" placeholder="Nhập họ tên bạn (bắt buộc)"></input>
+                <input class="input-text" type="email" placeholder="Email"></input>
+                <a href="#" class="third-cancel">Bỏ qua</a>
+                <input class="btn-reply"  type="button" value="Trả lời"></input>
+              </div>
+               <div class="subreply-person first-reply">
+                <p class="name-person reply-person">Thúy</p> <span class="date">- lúc 26/08/2016 08:36</span>
+                <p>Dùng có bị kích ứng da không chị?</p>
+              </div>
+              <div class="subreply-person second-reply">
+                <p class="name-person reply-person">Mỹ Linh</p> <span class="date">- lúc 26/08/2016 08:36</span>
+                <p>Cũng tốt, dùng vào thấy sạch ra.
+                Da nào cũng OK, mình mới đặt 3 hộp nữa.</p>
+              </div>
+           </div>
+            </div>
+            <hr>
+            <b>Thảo luận</b>
+            <div class="fb-commend">
+              <img src="images/command-facebook.png" alt="">
+            </div>
+            <a href="#"><img class="banne-footer" src="images/banner-bottom.png" alt=""></a>
+            <!-- end third paragraph -->
+          </div>
+        </div>
+
+        <!-- slide bar right -->
+        <aside  class="slide-bar">
+          <a href="#">
+            <img src="images/banner-aside.png" alt="">
+          </a>
+          <div class="first-para">
+            <p class="title-para">Nhà cung cấp khác đang bán sản phẩm này</p>
+            <ul class="list-pro">
+              <li class="item-pro">
+                <img src="images/pro-no-1.png" alt="">
+                <p class="sale-until">KM đến 20/10</p>
+                <div class="text-decript">
+                  <a class="text-pro">Mắt Sáp Chì Mí Mira Eyeshadow And Make-Up Pencil</a>
+                  <p class="price-pro">950.000đ</p><span>1.295.000đ</span>
+                </div>
+              </li>
+              <li class="item-pro">
+                <img src="images/pro-no-2.png" alt="">
+                <div class="text-decript">
+                  <a class="text-pro">Mắt Sáp Chì Mí Mira Eyeshadow And Make-Up Pencil</a>
+                  <p class="price-pro">950.000đ</p><span>1.295.000đ</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- end first paragraph -->
+          <div class="first-para">
+            <p class="title-para">Sản phẩm nổi bật cùng danh mục</p>
+            <ul class="list-pro">
+              <li class="item-pro">
+                <img src="images/pro-no-1.png" alt="">
+                <p class="sale-until">KM đến 20/10</p>
+                <div class="text-decript">
+                  <a class="text-pro">Mắt Sáp Chì Mí Mira Eyeshadow And Make-Up Pencil</a>
+                  <p class="price-pro">950.000đ</p><span>1.295.000đ</span>
+                </div>
+              </li>
+              <li class="item-pro">
+                <img src="images/pro-no-2.png" alt="">
+                <div class="text-decript">
+                  <a class="text-pro">Mắt Sáp Chì Mí Mira Eyeshadow And Make-Up Pencil</a>
+                  <p class="price-pro">950.000đ</p><span>1.295.000đ</span>
+                </div>
+              </li>
+              <li class="item-pro">
+                <img src="images/pro-no-4.png" alt="">
+                <p class="sale-until">KM đến 20/10</p>
+                <div class="text-decript">
+                  <a class="text-pro">Mắt Sáp Chì Mí Mira Eyeshadow And Make-Up Pencil</a>
+                  <p class="price-pro">950.000đ</p><span>1.295.000đ</span>
+                </div>
+              </li>
+              <li class="item-pro">
+                <img src="images/pro-no-5.png" alt="">
+                <div class="text-decript">
+                  <a class="text-pro">Mắt Sáp Chì Mí Mira Eyeshadow And Make-Up Pencil</a>
+                  <p class="price-pro">950.000đ</p><span>1.295.000đ</span>
+                </div>
+              </li>
+              <li class="item-pro">
+                <img src="images/pro-no-6.png" alt="">
+                <div class="text-decript">
+                  <a class="text-pro">Mắt Sáp Chì Mí Mira Eyeshadow And Make-Up Pencil</a>
+                  <p class="price-pro">950.000đ</p><span>1.295.000đ</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- end second paragraph -->
+          <div class="first-para">
+            <p class="title-para">Nhà cung cấp khác đang bán sản phẩm này</p>
+            <ul class="list-pro">
+              <li class="item-pro">
+                <img src="images/pro-no-1.png" alt="">
+                <p class="sale-until">KM đến 20/10</p>
+                <div class="text-decript">
+                  <a class="text-pro">Mắt Sáp Chì Mí Mira Eyeshadow And Make-Up Pencil</a>
+                  <p class="price-pro">950.000đ</p><span>1.295.000đ</span>
+                </div>
+              </li>
+              <li class="item-pro">
+                <img src="images/pro-no-2.png" alt="">
+                <div class="text-decript">
+                  <a class="text-pro">Mắt Sáp Chì Mí Mira Eyeshadow And Make-Up Pencil</a>
+                  <p class="price-pro">950.000đ</p><span>1.295.000đ</span>
+                </div>
+              </li>
+              <li class="item-pro">
+                <img src="images/pro-no-5.png" alt="">
+                <p class="sale-until">KM đến 20/10</p>
+                <div class="text-decript">
+                  <a class="text-pro">Mắt Sáp Chì Mí Mira Eyeshadow And Make-Up Pencil</a>
+                  <p class="price-pro">950.000đ</p><span>1.295.000đ</span>
+                </div>
+              </li>
+              <li class="item-pro">
+                <img src="images/pro-no-7.png" alt="">
+                <div class="text-decript">
+                  <a class="text-pro">Mắt Sáp Chì Mí Mira Eyeshadow And Make-Up Pencil</a>
+                  <p class="price-pro">950.000đ</p><span>1.295.000đ</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- end third paragraph -->
+        </aside>
+          </div>
+          
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h4>Hỗ trợ khách hàng</h4>
+            <ul>
+              <li><a href="javascript:void();" title="Tìm hiểu chính sách đổi trả">Tìm hiểu chính sách đổi trả</a>
+              </li>
+              <li><a href="javascript:void();" title="Tìm hiểu chính sách bảo hành">Tìm hiểu chính sách bảo hành</a>
+              </li>
+              <li><a href="javascript:void();" title="Cách đặt hàng online &amp; thanh toán">Cách đặt hàng online & thanh toán</a>
+              </li>
+              <li><a href="javascript:void();" title="Chưa tìm được sản phẩm mong muồn" class="default">Chưa tìm được sản phẩm mong muốn?</a>
+              </li>
+              <li><a href="javascript:void();" title="Trung tâm hỗ trợ - myCare">Trung tâm hỗ trợ - myCare</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h4>Bạn thắc mắc?</h4>
+            <p class="text-support">Tổng đài hỗ trợ<i>(bán hàng, góp ý, khiếu nại)</i></p>
+            <p class="telephone"><a href="tel:1900 636 798" title="" target="_blank">1900 636 798</a></p>
+            <p class="time">Chúng tôi phục vụ bạn từ <b>(08-18h / T2-T7)</b></p><a href="javascript:void(0);" title="" class="btn btn-border"><span>Gửi yêu cầu hỗ trợ khác</span></a>
+          </div>
+          <div class="col-sm-3 padding">
+            <h4>myMall.vn</h4>
+            <ul>
+              <li><a href="javascript:void();" title="Giới thiệu myMall Việt Nam">Giới thiệu myMall Việt Nam</a>
+              </li>
+              <li><a href="javascript:void();" title="Quy chế sàn giao dịch myMall">Quy chế sàn giao dịch myMall</a>
+              </li>
+              <li><a href="javascript:void();" title="Điều khoản sử dụng">Điều khoản sử dụng</a>
+              </li>
+              <li class="orange"><a href="javascript:void();" title="Bán hàng trên myMall">Bán hàng trên myMall</a>
+              </li>
+              <li class="bct"><img src="images/bct.jpg" alt="">
+                <p><i>(myMall đã được đăng ký với Bộ Công Thương - mã hóa thông tin với Norton Synmantic)</i></p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <div class="connect-mymall">
+              <h4>Kết nối myMall</h4>
+              <p><img src="images/imgfb.jpg" alt=""></p>
+              <p class="total-link">Dự án TMĐT của <a href="javascript:void(0);" title="">Tập đoàn ITL<br/></a><a href="javascript:void(0);" title="">myMall.vn</a><a href="javascript:void(0);" title="">myFace.vn</a><a href="javascript:void(0);" title="">shop.myFace.vn</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-md-5 padding1">
+              <p class="copyright">Copyright ©2016 - Công ty TNHH Thương mại Điện tử Modern Life.</p>
+              <p class="address"><b>Văn phòng: </b><span>P802, C.T Plaza Trường Sơn, P. 2, Q. Tân Bình, TP. HCM. </span></p>
+              <p class="address">GP số: <b>0312952685 </b>do Sở kế hoạch &amp; Đầu tư TP. Hồ Chí Minh cấp ngày 02/10/2014</p>
+            </div>
+            <div class="col-md-7 padding2">
+              <p>Bạn có thể thanh toán với</p>
+              <div class="clearfix">
+                <div class="total-card pull-left"><span class="btn btn-border">Tiền mặt - COD</span><span class="btn btn-border">ATM</span><span class="btn btn-border">Visa - Master</span><span class="btn btn-border">Trả Góp</span></div>
+                <div class="pull-right"><a href="javascript:void(0);" title="" class="btn btn-border btn-version-mobile"><span><i class="text">Xem phiên bản Mobile   </i><i class="fa fa-caret-right"></i></span></a></div>
+              </div>
+            </div>
+          </div>
+        </div><a href="#" class="scrollup"><span class="fa fa-angle-up"></span></a>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/l10n.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.picZoomer.js"></script>
+    <script src="js/script.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+     <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36251023-1']);
+      _gaq.push(['_setDomainName', 'jqueryscript.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+       // ======== scroll with a=================
+       (function($, window, undefined) {
+          $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html, body').animate({
+                  scrollTop: target.offset().top -117
+                }, 1000);
+                return false;
+              }
+            }
+          });
+       }(jQuery, window));
+      
+    </script>
+    
+    <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </body>
+</html>

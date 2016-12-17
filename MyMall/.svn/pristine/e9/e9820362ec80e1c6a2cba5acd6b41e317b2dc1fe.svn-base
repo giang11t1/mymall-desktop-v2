@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" class="no-js ie ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>myMall</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/icon/favicon.ico"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"> -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/global.css">
+    <!-- <script src="js/modernizr.js"></script> -->
+  </head>
+  <body class="home">
+    <header class="header-cart">
+      <div class="container">
+        <div class="header-top">
+          <div class="row">
+            <div class="col-md-2 logo-humburger"><a href="javascript:void(0);" title="" class="logo"><img src="images/logo.png" class="img-responsive" alt=""></a><a title="" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="humburger collapsed"><span class="fa fa-bars"></span><span>Danh mục</span></a></div>
+            <div class="col-md-6">
+              <form class="form-search dropdown"><a href="javascript:void(0);" title="" type="button" data-toggle="dropdown" class="btn btn-all dropdown-toggle"><span class="text">Tất cả</span><span class="fa fa-angle-down"></span></a>
+                <div role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                  <div class="form-box">
+                    <ul>
+                      <li>text1</li>
+                      <li>text2</li>
+                      <li>text3</li>
+                    </ul>
+                  </div>
+                </div>
+                <input type="text" placeholder="Xu hướng tìm: Note 7, Mi brand 2, son duong moi..." class="form-control">
+                <button type="submit" class="btn btn-search"><span class="fa fa-search"></span></button>
+              </form>
+            </div>
+            <div class="col-md-4 clearfix hotline-header">
+              <p>Hotline: <a href="tel:1900636088" class="phone">1900 636 088</a> (08-18h, từ T2-T7)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main-cart">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0);" title="">myMall.vn</a></li>
+          <li class="breadcrumb-item active"><a href="javascript:void(0);" title="">Giỏ hàng</a></li>
+        </ol>
+       <!-- main empty shopping  -->
+        <div class="wrap-emptyshop">
+          <div>
+            <img src="images/empty-shopping.png" alt="">
+          </div>
+          <h2>Rất tiếc, giỏ hàng của bạn hiện đang trống</h2>
+          <p class="pre">Hãy nhanh tay tìm kiếm & chọn những sản phẩm yêu thích của bạn</p>
+          <button type="button" class="continue">Tiếp tục mua sắm</button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-cart">
+      <div class="container">
+        <ul class="listmenu">
+          <li class="item-menu">
+            <a href="#" title="">Hướng dẫn đặt hàng</a>
+          </li>
+          <li class="item-menu">
+            <a href="#" title="">Hướng dẫn thanh toán</a>
+          </li>
+          <li class="item-menu">
+            <a href="#" title="">Hướng dẫn đổi trả - hoán tiền</a>
+          </li>
+          <li class="item-menu">
+            <a href="#" title="">Các vấn đề về đơn hàng</a>
+          </li>
+          <li class="item-menu">
+            <a href="#" title="">Cần trợ giúp trực tuyến</a>
+          </li>
+        </ul>
+        <p class="line-footer">©2016 - Bản quyền của Công ty TNHH Thương Mại Điện Tử Modern Life.</p>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/l10n.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script src="js/script.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+ 
+    <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </body>
+</html>

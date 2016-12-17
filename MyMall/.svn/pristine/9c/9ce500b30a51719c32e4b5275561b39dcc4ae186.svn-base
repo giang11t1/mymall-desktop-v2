@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" class="no-js ie ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>myMall</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/icon/favicon.ico"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"> -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/global.css">
+    <!-- <script src="js/modernizr.js"></script> -->
+  </head>
+  <body class="home">
+    <header class="header-cart">
+      <div class="container">
+        <div class="header-top">
+          <div class="row">
+            <div class="col-md-2 logo-humburger"><a href="javascript:void(0);" title="" class="logo"><img src="images/logo.png" class="img-responsive" alt=""></a><a title="" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="humburger collapsed"><span class="fa fa-bars"></span><span>Danh mục</span></a></div>
+            <div class="col-md-6">
+              <form class="form-search dropdown"><a href="javascript:void(0);" title="" type="button" data-toggle="dropdown" class="btn btn-all dropdown-toggle"><span class="text">Tất cả</span><span class="fa fa-angle-down"></span></a>
+                <div role="menu" aria-labelledby="menu1" class="dropdown-menu">
+                  <div class="form-box">
+                    <ul>
+                      <li>text1</li>
+                      <li>text2</li>
+                      <li>text3</li>
+                    </ul>
+                  </div>
+                </div>
+                <input type="text" placeholder="Xu hướng tìm: Note 7, Mi brand 2, son duong moi..." class="form-control">
+                <button type="submit" class="btn btn-search"><span class="fa fa-search"></span></button>
+              </form>
+            </div>
+            <div class="col-md-4 clearfix hotline-header">
+              <p>Hotline: <a href="tel:1900636088" class="phone" title="">1900 636 088</a> (08-18h, từ T2-T7)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main-cart">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0);" title="">myMall.vn</a></li>
+          <li class="breadcrumb-item active"><a href="javascript:void(0);" title="">Giỏ hàng</a></li>
+        </ol>
+        <h2>Giỏ hàng của bạn</h2> <span class="note-number">(Đang có <span class="number">04</span> sản phẩm trong giỏ hàng)</span>
+        <div class="left-cart col-md-8">
+          <!-- show error box in cart  -->
+          <div class="show-error-box">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <p>Giỏ hàng của bạn có sản phẩm không còn tại kho, vui lòng kiểm tra lại giỏ hàng</p>
+            <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+          </div>
+          <table class="table table-striped tb-cart">
+            <tbody>
+              <tr class="title-tb">
+                <td style="padding-left: 25px;">SẢN PHẨM</td>
+                <td class="right">SỐ LƯỢNG</td>
+                <td class="right">GIÁ</td>
+                <td class="right">THÀNH TIỀN</td>
+              </tr>
+              <tr class="have-gift">
+                <td class="product">
+                  <div class="wrap-img">
+                    <img src="images/img-cart-1.png" alt="">
+                  </div>
+                  <div class="descript">
+                    <a href="#" class="title" title="">Túi Đeo Chéo LATA HN08 - Da Bò Nhạt - thanh lịch kết hợp cùng mẫu thiết kế khá cổ điển.</a>
+                  </div>
+                  <!-- gift ==================== -->
+                  <div class="wrap-gift">
+                    <div class="wrap-img-gift">
+                      <img src="images/img-sub-cart.png" alt="">
+                      <i class="fa fa-gift" aria-hidden="true"></i>
+                    </div>
+                      <p class="detail">Tặng Ví cầm tay Lata VN03 da bò...</p>
+                      <p class="number-gift">1</p>
+                      <p class="price-gift">115.000đ</p>
+                  </div>
+                </td>
+                <td class="no-product right">
+                  <input type="number" class="number-cart" value="1"></input>
+                  <div class="remove">
+                    <i class="fa fa-times" aria-hidden="true"></i> <span>Bỏ sản phẩm</span>
+                  </div>
+                </td>
+                <td class="right price">
+                  574.000đ
+                </td>
+                <td class="right">574.000đ</td>
+              </tr>
+              <tr>
+                <td class="product">
+                  <div class="wrap-img">
+                    <img src="images/img-cart-2.png" alt="">
+                  </div>
+                  <div class="descript">
+                    <a href="#" class="title" title="">Búp Bê Hàn Quốc bằng Giấy Handmade Paper Craft (Nữ) - Size L - Màu Xanh</a>
+                  </div>
+                </td>
+                <td class="no-product  right">
+                  <input type="number" class="number-cart" value="1"></input>
+                  <div class="remove">
+                    <i class="fa fa-times" aria-hidden="true"></i> <span>Bỏ sản phẩm</span>
+                  </div>
+                </td>
+                <td class="right price">
+                  230.000đ
+                </td>
+                <td class="right">230.000đ</td>
+              </tr>
+              <tr>
+                <td class="product">
+                  <div class="wrap-img">
+                    <img src="images/img-cart-3.png" alt="">
+                  </div>
+                  <div class="descript">
+                    <a href="#" class="title" title="">Tiểu thuyết Nhà giả kim của Paulo Coelho - NXB Văn Học</a>
+                  </div>
+                  <p class="out-of-cart">Sản phẩm đang hết hàng</p>
+                  <button type="button" class="note" data-toggle="modal" data-target="#myModal3">Thông báo khi có hàng</button>
+                </td>
+                <td class="no-product right">
+                  <input type="number" class="number-cart" value="1"></input>
+                  <div class="remove">
+                    <i class="fa fa-times" aria-hidden="true"></i> <span>Bỏ sản phẩm</span>
+                  </div>
+                </td>
+                <td class="right price">
+                  97.000đ
+                </td>
+                <td class="right">97.000đ</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+         <!-- popup thông báo khi có hàng =============-->
+          <!-- Modal -->
+          <!-- <div class="modal fade" id="myModal3" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+                  <p class="title">Bạn vui lòng để lại địa chỉ Email, myMall sẽ thông báo khi sản phẩm có hàng.</p>
+                  <div class="ip-email">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <input type="text" placeholder="Nhập địa chỉ email của bạn"></input>
+                  </div>
+                  <button type="button" class="send"> Gửi</button>
+              </div>
+            </div>
+          </div> -->
+          <!-- popup send success================== -->
+          <div class="modal fade" id="myModal3" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+                  <i class="fa fa-paper-plane-o " aria-hidden="true"></i>
+                  <p class="title">Sản phẩm đã được thêm vào danh sách khi có hàng</p>
+                  
+                  <button type="button" class="send"> Tiếp tục</button>
+              </div>
+            </div>
+          </div>
+        <!-- div thông tin đơn hàng -->
+        <div class="right-cart col-md-4 main-right-cart">
+           <table class="table">
+            <tbody>
+              <tr>
+                <td class="title-right">Thông tin đơn hàng</td>
+              </tr>
+              <tr>
+                <td class="second-line">
+                  <p>Tổng cộng:<span style="color: #ff9000; font-weight: bold;">901.000đ</span></p> 
+                  <p>Phí vận chuyển: <span>Chưa có</span></p>
+                </td>
+              </tr>
+              <tr >
+                <td class="third-line">
+                  <p>Mua đơn hàng này bạn sẽ tích lũy</p>
+                  <i class="myxu-cart">&nbsp</i><p class="pay-myxu">+ <span>9010</span><span class="myxu"> myXu</span></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="pay"> Tiến hành thanh toán</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" class="continue">Tiếp tục mua hàng</button>
+        </div>
+       
+      </div>
+    </main>
+    <footer class="footer-cart">
+      <div class="container">
+        <ul class="listmenu">
+          <li class="item-menu">
+            <a href="#" title="">Hướng dẫn đặt hàng</a>
+          </li>
+          <li class="item-menu">
+            <a href="#" title="">Hướng dẫn thanh toán</a>
+          </li>
+          <li class="item-menu">
+            <a href="#" title="">Hướng dẫn đổi trả - hoán tiền</a>
+          </li>
+          <li class="item-menu">
+            <a href="#" title="">Các vấn đề về đơn hàng</a>
+          </li>
+          <li class="item-menu">
+            <a href="#" title="">Cần trợ giúp trực tuyến</a>
+          </li>
+        </ul>
+        <p class="line-footer">©2016 - Bản quyền của Công ty TNHH Thương Mại Điện Tử Modern Life.</p>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/l10n.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script src="js/script.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+ 
+    <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </body>
+</html>
